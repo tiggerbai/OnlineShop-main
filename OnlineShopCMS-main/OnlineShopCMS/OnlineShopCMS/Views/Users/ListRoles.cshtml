@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "RoleList";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserManagLayout.cshtml";
 }
 
 <h1>角色列表</h1>
@@ -26,19 +26,22 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @if (Model != null)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    <a class="btn btn-light btn-sm" style="padding-left:20px;padding-right:20px;" asp-action="EditRole" asp-route-id="@item.Id">Edit</a>
-                </td>
-            </tr>
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        <a class="btn btn-light btn-sm" style="padding-left:20px;padding-right:20px;" asp-action="EditRole" asp-route-id="@item.Id">Edit</a>
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>

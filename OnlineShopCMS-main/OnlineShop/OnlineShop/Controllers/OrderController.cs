@@ -29,30 +29,27 @@ namespace OnlineShop.Controllers
         // 訂單列表
         public async Task<IActionResult> Index()
         {
-            
             List<OrderViewModel> orderVM = new List<OrderViewModel>();
-
             var userId = _userManager.GetUserId(User);
             var orders = await _context.Order.
-                OrderByDescending(k => k.OrderDate).            //用日期排序
-                Where(m => m.UserId == userId).ToListAsync();   //取得屬於當前登入者的訂單
+                            OrderByDescending(k => k.OrderDate).  //依照日期排序
+                            Where(m => m.UserId == userId).ToListAsync();
 
-            foreach(var item in orders)
+            foreach (var item in orders)
             {
                 item.OrderItem = await _context.OrderItem.
-                    Where(p => p.OrderId == item.Id).ToListAsync(); //取得訂單內的商品項目
-
-                var ovm = new OrderViewModel()
+                                    Where(p => p.OrderId == item.Id).ToListAsync();
+                var vm = new OrderViewModel()
                 {
                     Order = item,
                     CartItems = GetOrderItems(item.Id)
                 };
-
-                orderVM.Add(ovm);
+                orderVM.Add(vm);
             }
-
             return View(orderVM);
         }
+        #endregion
+
 
         // 訂單資訊
         public async Task<IActionResult> Details(int? Id)
@@ -76,7 +73,7 @@ namespace OnlineShop.Controllers
             return View(order);
         }
 
-        #endregion
+      
 
         #region 結帳流程
 
@@ -111,27 +108,32 @@ namespace OnlineShop.Controllers
             {
                 order.OrderDate = DateTime.Now;
                 order.isPaid = false;
+                order.Total = order.OrderItem.Sum(m => m.SubTotal);
+                order.UserId = _userManager.GetUserId(User);
+                order.UserName = _userManager.GetUserName(User);
+                order.isShipped = false;
                 order.OrderItem = SessionHelper.GetObjectFromJson<List<OrderItem>>(HttpContext.Session, "cart");
 
                 _context.Add(order);
                 await _context.SaveChangesAsync();
                 SessionHelper.Remove(HttpContext.Session, "cart");
 
-                return RedirectToAction("ReviewOrder", new {  Id = order.Id } );
+                return RedirectToAction("ReviewOrder", new { Id = order.Id });
             }
-            return View();
+            return View("Checkout");
         }
+
 
         // 取得當前訂單
         public async Task<IActionResult> ReviewOrder(int? Id)
         {
-            if(Id == null)
+            if (Id == null)
             {
                 return NotFound();
             }
 
-            var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == Id); 
-            if(order.UserId != _userManager.GetUserId(User))
+            var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == Id);
+            if (order.UserId != _userManager.GetUserId(User))
             {
                 return NotFound();
             }
@@ -144,6 +146,7 @@ namespace OnlineShop.Controllers
             return View(order);
         }
 
+
         // 付款
         public async Task<IActionResult> Payment(int? Id, bool isSuccess)
         {
@@ -153,7 +156,7 @@ namespace OnlineShop.Controllers
             }
 
             var order = await _context.Order.FirstOrDefaultAsync(p => p.Id == Id);
-            if(order == null)
+            if (order == null)
             {
                 return NotFound();
             }
@@ -174,9 +177,7 @@ namespace OnlineShop.Controllers
         // 取得商品詳細資料
         private List<CartItem> GetOrderItems(int orderId)
         {
-            
             var OrderItems = _context.OrderItem.Where(p => p.OrderId == orderId).ToList();
-
             List<CartItem> orderItems = new List<CartItem>();
             foreach (var orderitem in OrderItems)
             {
@@ -184,9 +185,58 @@ namespace OnlineShop.Controllers
                 item.Product = _context.Product.Single(x => x.Id == orderitem.ProductId);
                 orderItems.Add(item);
             }
-
             return orderItems;
         }
+       
+        // 取消訂單
+        public async Task<IActionResult> CancelOrder(int? Id)
+        {
+            try {   if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == Id);
+            if (order == null || order.UserId != _userManager.GetUserId(User))
+            {
+                return NotFound();
+            }
+
+            order.OrderStatus = OrderStatus.Cancelled; // 將訂單狀態設為已取消
+            _context.Update(order);
+            await _context.SaveChangesAsync();
+
+            // 重定向到用戶的訂單頁面，假設有個叫 Orders 的控制器和名為 MyOrders 的動作
+            return RedirectToAction("MyOrders", "Orders");}
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+
+        }
+
+        // 退貨
+        public async Task<IActionResult> ReturnOrder(int? orderId, int? itemId)
+        {
+            if (orderId == null || itemId == null)
+            {
+                return NotFound();
+            }
+
+            var orderItem = await _context.OrderItem.FirstOrDefaultAsync(m => m.OrderId == orderId && m.Id == itemId);
+            if (orderItem == null)
+            {
+                return NotFound();
+            }
+
+            orderItem.IsReturned = true; // 假設有一個 IsReturned 屬性表示商品是否已退貨
+            _context.Update(orderItem);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Details", new { Id = orderId });
+        }
+
 
     }
 }

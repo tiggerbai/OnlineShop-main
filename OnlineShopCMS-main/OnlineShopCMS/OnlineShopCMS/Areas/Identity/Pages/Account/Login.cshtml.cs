@@ -77,7 +77,7 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-        
+
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
@@ -85,6 +85,18 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    if (user != null)
+                    {
+                        bool isAdministrator = await _userManager.IsInRoleAsync(user, "Administrator");
+                        if (!isAdministrator)
+                        {
+                            // 如果用戶不是管理員，則進行相應的處理，例如顯示錯誤消息或重定向到某個頁面
+                            ModelState.AddModelError(string.Empty, "You are not authorized to login.");
+                            return Page();
+                        }
+                    }
+
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

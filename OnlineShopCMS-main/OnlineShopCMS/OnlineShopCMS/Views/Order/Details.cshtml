@@ -1,0 +1,117 @@
+﻿@model OnlineShopCMS.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_OrderManagLayout.cshtml";
+}
+<div class="container" style="position: absolute; left: 50%; transform: translateX(-50%);">
+    <div class="row" style="border-radius: 30px;">
+        <div class="col-lg-9">
+            <div class="container">
+                <div id="tooltips card">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="text-center">
+                                <h1 class="display-6 font-weight-bolder fw-bolder" style="color:darkgoldenrod">
+                                    <i class="fas fa-list-alt"></i> 銷貨單
+                                </h1>
+                                <h4>訂單明細</h4>
+                            </div>
+                            <div class="mt-3">
+                                <div class="ml-0">
+                                    <button id="printButton">列印提貨單</button>
+                                    <a class="btn btn-outline-secondary btn-sm" asp-action="Index">返回列表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th class="col-sm-3">訂單日期</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.OrderDate)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-sm-3">@Html.DisplayNameFor(model => model.UserId)</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.UserId)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-sm-3">收件人</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.ReceiverName)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-sm-3">收件地址</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.ReceiverAddress)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-sm-3">收件電話</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.ReceiverPhone)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th class="col-sm-3">總金額</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.Total)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th class="col-sm-3">付款狀態</th>
+                                        <td class="col-sm-9">
+                                            @if (Model.IsPaid)
+                                            {
+                                                <span class="badge badge-success">已付款</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-danger">未付款</span>
+                                            }
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <th class="col-sm-3">出貨狀態</th>
+                                        <td class="col-sm-9">
+                                            @if (Model.IsShipped)
+                                            {
+                                                <i class="fas fa-truck" style="color: green;"></i>
+                                                <span style="color: green;">已出貨</span>
+                                            }
+                                            else
+                                            {
+                                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                                <span style="color: red;">未出貨</span>
+                                            }
+                                        </td>
+                                    </tr>
+
+                                 
+
+
+                                    <tr>
+                                        <th class="col-sm-3">訂單狀態</th>
+                                        <td class="col-sm-9">@Html.DisplayFor(model => model.OrderStatus)</td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="mt-3">
+                                <a asp-action="EditOrder" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('printButton').addEventListener('click', function () {
+        window.print();
+    });
+
+</script>

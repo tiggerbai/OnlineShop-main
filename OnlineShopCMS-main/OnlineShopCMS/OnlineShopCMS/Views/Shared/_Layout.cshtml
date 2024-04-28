@@ -16,7 +16,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse ">
                     <partial name="_LoginPartial" />
 
                     <ul class="navbar-nav flex-grow-1">
@@ -30,16 +30,18 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">儀錶板</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">訂單管理</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index">訂單管理</a>
                         </li>
-                       
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">商品列表</a>
+                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">商品管理</a>
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">產品管理</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item text-dark" asp-controller="Products" asp-action="Index">商品列表</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-dark" asp-controller="Products" asp-action="Create">上架產品</a>
-                                <a class="dropdown-item text-dark" asp-controller="Products" asp-action="CreateCategory">新增產品類別</a>
+                                <a class="dropdown-item text-dark" asp-controller="Products" asp-action="ListCategories">品類列表</a>
+                                <a class="dropdown-item text-dark" asp-controller="Products" asp-action="CreateCategory">新增商品類別</a>
                             </div>
                         </li>
                         <!---->
@@ -76,14 +78,6 @@
             &copy; 2024 - OnlineShopCMS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/ckeditor5/build/ckeditor.js"></script>

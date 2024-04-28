@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "RoleEdit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserManagLayout.cshtml";
 }
 
 <h1>EditRole</h1>
@@ -26,10 +26,14 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Users in this role</label>
-                @foreach(var users in ViewBag.users) 
-                { 
-                    <div class="form-control-sm">@users.Email</div>
+                @if (ViewBag.users != null)
+                {
+                    foreach (var user in ViewBag.users)
+                    {
+                        <div class="form-control-sm">@user.Email</div>
+                    }
                 }
+
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">

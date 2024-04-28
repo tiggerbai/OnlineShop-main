@@ -1,0 +1,29 @@
+﻿@model IEnumerable<OnlineShopCMS.Areas.Identity.Data.OnlineShopUserViewModel>
+@using OnlineShopCMS.Models
+
+@{
+    ViewData["Title"] = "ListAdministrator";
+    Layout = "~/Views/Shared/_UserManagLayout.cshtml";
+}
+
+<h2>Administrator Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.User.UserName)</td>
+            <td>@Html.DisplayFor(modelItem => item.User.Email)</td>
+            <td>@Html.DisplayFor(modelItem => item.RoleName)</td>
+        </tr>
+    }
+    </tbody>
+</table>

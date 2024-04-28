@@ -22,17 +22,20 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<OnlineShopUser> _signInManager;
         private readonly UserManager<OnlineShopUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<OnlineShopUser> userManager,
             SignInManager<OnlineShopUser> signInManager,
+            RoleManager<IdentityRole> roleManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
             _logger = logger;
             _emailSender = emailSender;
         }
@@ -46,6 +49,7 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -91,8 +95,9 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new OnlineShopUser { 
-                    UserName = Input.Email, 
+                var user = new OnlineShopUser
+                {
+                    UserName = Input.Email,
                     Email = Input.Email,
                     Name = Input.Name,
                     DOB = Input.DOB,
@@ -102,7 +107,7 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    _userManager.AddToRoleAsync(user, "User").Wait(); //加入角色
+                    _userManager.AddToRoleAsync(user, "User").Wait(); // 將 "Administrator" 改為 "User"
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

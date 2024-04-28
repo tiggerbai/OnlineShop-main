@@ -17,21 +17,47 @@
                                 <h6 class="text-primary text-uppercase">Product Details</h6>
                                 <h1 class="display-5 text-uppercase mb-0" id="product-name">@Model.Product.Name</h1>
                             </div>
-                            <p class="card-text text-muted" id="product-description">@Model.Product.Description</p>
-                            <hr />
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4>Price:</h4>
-                                    <p class="text-success" id="product-price">@Model.Product.Price</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4>Stock:</h4>
-                                    <p class="text-info" id="product-stock">@Model.Product.Stock</p>
+                            <div class="bg-light p-4">
+                                <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item w-50" role="presentation">
+                                        <button class="nav-link text-uppercase w-100 active" id="pills-description-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description"
+                                                aria-selected="true">
+                                            商品描述
+                                        </button>
+                                    </li>
+                                    <li class="nav-item w-50" role="presentation">
+                                        <button class="nav-link text-uppercase w-100" id="pills-detail-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-detail" type="button" role="tab" aria-controls="pills-detail"
+                                                aria-selected="false">
+                                            商品详细
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+                                        <p class="card-text text-muted" id="product-description">@Model.Product.Description</p>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4>建議售價:</h4>
+                                                <p class="text-success" id="product-price">@Model.Product.Price</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4>庫存:</h4>
+                                                <p class="text-info" id="product-stock">@Model.Product.Stock</p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <h4>商品簡介:</h4>
+                                        <p class="text-justify" id="product-content">@Html.Raw(Model.Product.Content)</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-detail" role="tabpanel" aria-labelledby="pills-detail-tab">
+                                        <p class="mb-0">這裡添加其他商供應商所提供之商品資訊。</p>
+                                    </div>
                                 </div>
                             </div>
-                            <hr />
-                            <h4>Content:</h4>
-                            <p class="text-justify" id="product-content">@Model.Product.Content</p>
+
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,125 @@
+﻿@model OnlineShopCMS.ViewModels.RegisterViewModel
+@using OnlineShopCMS.Models
+@using OnlineShopCMS.Areas.Identity.Data
+
+
+@{
+    ViewData["Title"] = "註冊";
+    Layout = "~/Views/Shared/_UserManagLayout.cshtml";
+}
+
+<style>
+    #unique-container {
+        border-radius: 20px; 
+    }
+</style>
+
+<!-- Main page content-->
+<div id="unique-container" class="container-xl px-4 mt-n10">
+    <div class="container" style="position:relative;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="text-center">
+                            <h2 class="display-6" style="border-radius:15px; color:white; background-color:darkblue; padding:10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-users-cog" style="font-size: 20px; margin-right: 10px;"></i>
+                                新增員工至管理員列表
+                            </h2>
+                            <br />
+                            <h4>Add To Administrator</h4>
+                            <div>
+                                <a asp-action="ListCategories">返回選單</a>
+                            </div>
+                        </div>
+
+                        <h4>員工資料</h4>
+                    </div>
+                    <div class="card-body">
+                        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Input.Email">Email</label>
+                                <input asp-for="Input.Email" class="form-control" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Input.Name">Name</label>
+                                <input asp-for="Input.Name" class="form-control" />
+                                <span asp-validation-for="Input.Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Input.DOB">Date of Birth</label>
+                                <input asp-for="Input.DOB" class="form-control" />
+                                <span asp-validation-for="Input.DOB" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Input.Gender">Gender</label>
+                                <select asp-for="Input.Gender" class="form-control">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Unknown">Unknown</option>
+                                </select>
+                                <span asp-validation-for="Input.Gender" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Input.Password">Password</label>
+                                <input asp-for="Input.Password" class="form-control" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Use another service to register.</h4>
+                <div>
+                    @if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                    {
+                        <p>There are no external authentication services configured.</p>
+                    }
+                    else
+                    {
+                        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                            @foreach (var provider in Model.ExternalLogins)
+                            {
+                                <button type="submit" class="btn btn-outline-primary" name="provider" value="@provider.Name">@provider.DisplayName</button>
+                            }
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="ListRoles">Back to List</a>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+

@@ -3,11 +3,16 @@
 
 @{
     ViewData["Title"] = "ListUsers";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserManagLayout.cshtml";
 }
 
-
-<h1>帳戶列表</h1>
+<div class="container-xl px-4 mt-n10">
+    <div class="card" style="border-radius: 20px">
+        <div class="card-header">
+            <h1 class="display-7 font-weight-bolder fw-bolder" style="color:darkblue"><i class="fas fa-user"></i> 帳戶列表 | List-User</h1>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
 
 <div class="container">
     <p class="row justify-content-end" style="margin-bottom:8px;">
@@ -62,3 +67,8 @@
         }
     </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+```

@@ -1,8 +1,83 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<!-- Main page content-->
+<div class="container-xl px-4 mt-n10">
+    <div class="row justify-content-center">
+        <!-- 將內容置中 -->
+        <div class="center-container mt-5 col-lg-8">
+            <!-- 使用 col-lg-8 控制在大屏幕上的寬度 -->
+            <div class="container mt-5">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                <div class="text-center">
+                    <h3 class="display-4 font-weight-bold">歡迎來到商城管理員系統</h3>
+                    <p class="lead mt-4"><h4>Welcome to Your Online Shop Management System</h4></p>
+                    <hr class="my-4">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <h4 class="text-success">@ViewData["UserName"],管理員您好 </h4>
+                        <div class="mt-4">
+                            <a class="btn btn-primary btn-lg" style="border-radius:20px" href="@Url.ActionLink("Dashboard")" role="button">點選進入系統</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted">請登入以繼續</p>
+                        <div class="mt-4">
+                            <a class="btn btn-primary btn-lg" style="border-radius:20px" href="/Identity/Account/Login" role="button">登入</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<style>
+
+    .container {
+        max-width: 960px; /* Slightly wider container for better layout */
+        padding: 2rem;
+        background-color: #f8f9fa; /* Light grey background for a subtle effect */
+        border-radius: 3rem; /* Rounded corners for the container */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    }
+
+    .nav-container {
+        max-width: 960px; /* Slightly wider container for better layout */
+        padding: 2rem;
+        background-color: #f8f9fa; /* Light grey background for a subtle effect */
+        border-radius: 3rem; /* Rounded corners for the container */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    }
+
+    .center-container {
+        max-width: 960px; /* Slightly wider container for better layout */
+        padding: 2rem;
+        background-color:aqua; /* Light grey background for a subtle effect */
+        border-radius: 3rem; /* Rounded corners for the container */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    }
+
+    h3 {
+        color:darkblue; /* Consistent brand color for the heading */
+    }
+
+    .btn-primary {
+        background-color: #0069d9; /* A slightly darker blue for better contrast */
+        border-color: #0062cc;
+    }
+
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #0056b3; /* Even darker on hover/focus for accessibility */
+            border-color: #0050a0;
+        }
+
+    hr {
+        border-top: 2px solid #b0bec5; /* Light blue-grey line for a more subtle separator */
+    }
+
+    .text-success {
+        color: #28a745; /* A brighter green to signify successful authentication */
+    }
+</style>

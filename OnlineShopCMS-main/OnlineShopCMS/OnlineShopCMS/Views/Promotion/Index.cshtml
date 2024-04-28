@@ -1,0 +1,56 @@
+﻿@model IEnumerable<OnlineShopCMS.Models.Promotion>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_PromotionManagLayout.cshtml";
+}
+<div class="container-xl px-4 mt-n10 position-relative">
+    <div class="card" style="border-radius: 20px">
+        <div class="card-header" style="margin:10px">
+            <div class="text-center" style="margin:20px">
+
+                <h2 class="display-6" style="border-radius:15px; color:white;background-color:darkblue;padding:20px"> <i class="fas fa-list-alt"></i> (促銷、優)列表 | Promotion List</h2>
+
+
+            </div>
+
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+               
+                <h3>所有活動</h3>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Is Active?</th>
+                            <th>編輯</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var promotion in Model)
+                        {
+                            <tr>
+                                <td>@promotion.Name</td>
+                                <td>@promotion.Description</td>
+                                <td>@(promotion.StartDate?.ToString("yyyy-MM-dd") ?? "N/A")</td>
+                                <td>@(promotion.EndDate?.ToString("yyyy-MM-dd") ?? "N/A")</td>
+                                <td>@(promotion.IsActive ? "Yes" : "No")</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@promotion.Id">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@promotion.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@promotion.Id">Delete</a>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

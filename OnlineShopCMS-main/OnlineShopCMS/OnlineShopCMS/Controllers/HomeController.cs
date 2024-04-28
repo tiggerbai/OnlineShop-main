@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineShopCMS.Areas.Identity.Data;
@@ -12,6 +13,8 @@ using System.Threading.Tasks;
 
 namespace OnlineShopCMS.Controllers
 {
+    [Authorize]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -25,6 +28,10 @@ namespace OnlineShopCMS.Controllers
 
         public IActionResult Index()
         {
+            var userName = User.Identity.Name; 
+
+           
+            ViewData["UserName"] = userName;
             return View();
         }
 

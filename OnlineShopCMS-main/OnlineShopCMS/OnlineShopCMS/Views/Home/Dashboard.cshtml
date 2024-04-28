@@ -1,38 +1,78 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@using OnlineShopCMS.Areas.Identity.Data
+
+@inject SignInManager<OnlineShopUser> SignInManager
+@inject UserManager<OnlineShopUser> UserManager
+@{
     ViewData["Title"] = "Dashborad";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
 }
 
-<h1>儀錶板</h1>
 
-<hr />
 
-<div class="row">
-    <div class="col-4">
-        <div class="card shadow-sm rounded">
-            <h5 class="card-header">使用者性別比</h5>
-            <div class="card-body">
-                <canvas id="example" style="position: relative" height="180"></canvas>
+<!-- Main page content-->
+<div class="container-xl px-4 mt-n10">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <div class="container">
+                    <div class="text-center">
+                        <h1 class="display-6 font-weight-bold" style="font-family: 'Courier New', Courier, monospace;">儀錶板</h1>
+                    </div>
+
+
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-8">
-        <div class="card shadow-sm rounded">
-            <h5 class="card-header">使用者總數</h5>
             <div class="card-body">
-                <canvas id="example1" style="position: relative" height="180"></canvas>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card shadow-sm rounded">
+                            <h5 class="card-header">使用者性別比</h5>
+                            <div class="card-body">
+                                <canvas id="example" style="position: relative" height="180"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="card shadow-sm rounded">
+                            <h5 class="card-header">使用者總數</h5>
+                            <div class="card-body">
+                                <canvas id="example1" style="position: relative" height="180"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div>
+                    <div class="card shadow-sm rounded">
+                        <h5 class="card-header">營業收入</h5>
+                        <div class="card-body">
+                            <canvas id="example2" style="position: relative" height="180"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
+
+
         </div>
     </div>
+
 </div>
-<p></p>
-<div>
-    <div class="card shadow-sm rounded">
-        <h5 class="card-header">營業收入</h5>
-        <div class="card-body">
-            <canvas id="example2" style="position: relative" height="180"></canvas>
-        </div>
-    </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
@@ -128,5 +168,5 @@
                 }
             }
         });
-   
+
 </script>

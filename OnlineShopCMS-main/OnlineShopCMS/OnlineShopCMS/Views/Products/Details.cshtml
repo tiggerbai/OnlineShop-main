@@ -2,41 +2,55 @@
 
 @{
     ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_ProductManagLayout.cshtml";
 }
 
-<div class="container mt-5">
+<!-- Main page content-->
+<div class="container-xl px-4 mt-n10">
     <div class="row">
-        <div class="col-md-6">
-            <img src="@Html.DisplayFor(model => model.imgsrc)" class="img-fluid" alt="Product Image" style="max-height: 400px;" />
-        </div>
-        <div class="col-md-6">
-            <h2>@Html.DisplayFor(model => model.product.Name)</h2>
-            <p class="text-muted">@Html.DisplayFor(model => model.product.Description)</p>
-            <hr />
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Price:</h4>
-                    <p class="text-success">@Html.DisplayFor(model => model.product.Price)</p>
-                </div>
-                <div class="col-md-6">
-                    <h4>Stock:</h4>
-                    <p class="text-info">@Html.DisplayFor(model => model.product.Stock)</p>
+        <div class="card align-content-center shadow-lg" style="border-radius:40px;">
+            <div class="card-header bg-primary text-white">
+                <h2 class="text-center">商品規格</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="@Url.Content(Model.imgsrc)" class="img-fluid rounded shadow" alt="Product Image" />
+                    </div>
+
+                    <div class="col-md-7">
+                        <h2 class="mb-0">@Html.DisplayFor(model => model.product.Name)</h2>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <p class="font-weight-bold">商品定價:</p>
+                                <h4>@Html.DisplayFor(model => model.product.Price) NTD</h4>
+                                @if (ViewBag.DiscountedPrice != null)
+                                {
+                                    <p class="font-weight-bold">折扣後價格:</p>
+                                    <h4>@ViewBag.DiscountedPrice NTD</h4>
+                                }
+                            </div>
+                            <div class="col-md-6">
+                                <p class="font-weight-bold">庫存含量:</p>
+                                <h4>@Html.DisplayFor(model => model.product.Stock) (組)</h4>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="mt-2">
+                            <h5 class="font-weight-bold">產品簡介:</h5>
+                            <div>@Html.DisplayFor(model => model.product.Description)</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr />
-            <h4>Content:</h4>
-            <p class="text-justify">@Html.Raw(Model.product.Content)</p>
-        </div>
-    </div>
-</div>
-
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-md-6">
-            <a asp-action="Edit" asp-route-id="@Model.product.Id" class="btn btn-primary">Edit</a>
-        </div>
-        <div class="col-md-6 text-right">
-            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            <div class="card-footer text-center">
+                <a asp-action="Edit" asp-route-id="@Model.product.Id" class="btn btn-primary">Edit</a>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                <a asp-action="GenerateDeliveryNote" asp-route-id="@Model.product.Id" class="btn btn-success">產生提貨單</a>
+            </div>
         </div>
     </div>
 </div>

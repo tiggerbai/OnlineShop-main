@@ -10,8 +10,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OnlineShopCMS.Data;
-using OnlineShopCMS.Models;
+using Microsoft.AspNetCore.Identity;
 using OnlineShopCMS.Services;
+using OnlineShopCMS.Repositories;
+
 
 namespace OnlineShopCMS
 {
@@ -28,12 +30,19 @@ namespace OnlineShopCMS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IPromotionService, PromotionService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IPromotionRepository, PromotionRepository>();
+
 
             services.AddDbContext<OnlineShopContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("OnlineShopContext")));
-            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IMailService, MailService>();
+           
+
+            services.AddScoped<OrderService>();
+
+
 
         }
 
@@ -55,16 +64,23 @@ namespace OnlineShopCMS
 
             app.UseRouting();
 
+
             app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                // Add a route for ShippingController
+                endpoints.MapControllerRoute(
+                    name: "shipping",
+                    pattern: "{controller=Shipping}/{action=Download}/{orderId?}");
             });
+
+
         }
+
     }
 }

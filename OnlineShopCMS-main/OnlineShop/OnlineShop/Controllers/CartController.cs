@@ -99,8 +99,15 @@ namespace OnlineShop.Controllers
 
         private string ViewImage(byte[] arrayImage)
         {
+            if (arrayImage == null)
+            {
+              
+                return null; 
+            }
+
             string base64String = Convert.ToBase64String(arrayImage, 0, arrayImage.Length);
             return "data:image/png;base64," + base64String;
         }
+
     }
 }

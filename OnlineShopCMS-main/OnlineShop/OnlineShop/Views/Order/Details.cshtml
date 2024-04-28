@@ -4,6 +4,28 @@
     ViewData["Title"] = "Details";
 }
 
+<style>
+    @@keyframes bounceOut {
+        20% {
+            transform: scale(0.9);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    .animated {
+        animation-name: bounceOut;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+</style>
+
 <div>　</div>
 <h3>訂單詳細資訊</h3>
 <hr />
@@ -47,7 +69,7 @@
             <div class="col-7">
                 <p>收貨人姓名：@Html.DisplayFor(model => model.ReceiverName)</p>
                 <p>收貨人電話：@Html.DisplayFor(model => model.ReceiverPhone)</p>
-                <p>收貨人地址：@Html.DisplayFor(model => model.ReceiverAdress)</p>
+                <p>收貨人地址：@Html.DisplayFor(model => model.ReceiverAddress)</p>
             </div>
             <div class="col-5">
                 <p>
@@ -67,6 +89,10 @@
                         <div class="w-75" id="payment-button"></div>
                     </div>
                 </div>
+                <form method="post" asp-controller="Order" asp-action="CancelOrder" asp-route-id="@Model.Id">
+                    <button type="button" class="btn btn-sm btn-danger" onclick="confirmCancelOrder()">取消訂單</button>
+
+                </form>
             </div>
         </div>
 
@@ -79,6 +105,28 @@
 
 
 <script src="https://www.paypal.com/sdk/js?client-id=AROOEAjq-CEdjN74SU6zEGiQIc-1CKe_Cloaeuudb9ZCZZeAF3dVdqkeqO4fhFOM035egHsnUlK86pk1&currency=TWD"></script>
+
+<script>
+    function confirmCancelOrder() {
+        Swal.fire({
+            title: '確定要取消訂單嗎？',
+            text: "此操作無法撤銷！",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '是的，取消它！',
+            cancelButtonText: '不，保留訂單！'
+        }).then((result) => {
+            if (result.value) {
+                // 表單提交
+                const form = document.querySelector('form');
+                form.submit();
+            }
+        });
+    }
+</script>
+
 <script>
     paypal.Buttons({
         style: {
