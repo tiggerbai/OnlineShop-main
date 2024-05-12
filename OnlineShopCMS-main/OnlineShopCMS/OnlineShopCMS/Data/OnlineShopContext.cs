@@ -42,5 +42,9 @@ namespace OnlineShopCMS.Data
         public DbSet<OnlineShopUser> OnlineShopUser { get; set; }
         public DbSet<OnlineShopCMS.Models.Ship> Ship { get; set; }
 
+        public DbSet<OnlineShopCMS.Models.Coupon> Coupon { get; set; }
+
+
+
     }
 }

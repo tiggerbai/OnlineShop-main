@@ -109,5 +109,37 @@ namespace OnlineShop.Controllers
             return "data:image/png;base64," + base64String;
         }
 
+        public IActionResult ApplyCoupon(string couponCode)
+        {
+            var coupon = _context.Coupon.FirstOrDefault(c => c.Code == couponCode);
+            if (coupon == null || coupon.ExpiryDate < DateTime.Now)
+            {
+                // 折價券無效，返回錯誤訊息
+                ViewBag.ErrorMessage = "Invalid coupon code";
+                return View(nameof(Index));
+            }
+
+            // 應用折價券的折扣
+            List<CartItem> CartItems = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+
+            if (CartItems != null)
+            {
+                decimal total = CartItems.Sum(m => m.SubTotal); // 計算商品總額
+                decimal discount = coupon.DiscountAmount; // 計算折扣金額
+                ViewBag.Total = total - discount; // 應用折扣
+            }
+
+            else
+            {
+                ViewBag.Total = 0;
+            }
+            Console.WriteLine(ViewBag.Total); // 輸出 ViewBag.Total 的值
+
+
+            return Json(new { Total = ViewBag.Total });
+
+        }
+
+
     }
 }

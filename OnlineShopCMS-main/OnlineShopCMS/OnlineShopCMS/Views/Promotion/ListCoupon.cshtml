@@ -1,0 +1,48 @@
+﻿@model IEnumerable<OnlineShopCMS.Models.Coupon>
+@using OnlineShopCMS.Models
+
+<h2>優惠券總覽</h2>
+
+<p>
+    <a asp-action="CreateCoupon">新增優惠券</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiscountAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiryDate)
+                </td>
+                <td>
+                    <a asp-action="EditCoupon" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="DetailsCoupon" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="DeleteCoupon" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

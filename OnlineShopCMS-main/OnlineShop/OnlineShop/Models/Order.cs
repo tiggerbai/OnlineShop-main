@@ -61,6 +61,8 @@ namespace OnlineShop.Models
         public int Amount { get; set; }
         public int SubTotal { get; set; }
         public bool IsReturned { get; set; }
+      
+
 
 
     }
@@ -78,5 +80,6 @@ namespace OnlineShop.Models
 
         public Product Product { get; set; }
         public string imageSrc { get; set; }
+
     }
 }

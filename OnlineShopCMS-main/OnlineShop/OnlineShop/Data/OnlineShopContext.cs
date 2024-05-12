@@ -9,6 +9,10 @@ namespace OnlineShop.Data
 {
     public class OnlineShopContext : DbContext
     {
+        public OnlineShopContext()
+        {
+        }
+
         public OnlineShopContext (DbContextOptions<OnlineShopContext> options)
             : base(options)
         {
@@ -18,5 +22,8 @@ namespace OnlineShop.Data
         public DbSet<OnlineShop.Models.Category> Category { get; set; }
         public DbSet<OnlineShop.Models.Order> Order { get; set; }
         public DbSet<OnlineShop.Models.OrderItem> OrderItem { get; set; }
+        public DbSet<OnlineShop.Models.Comment> Comment { get; set; }
+
+        public DbSet<OnlineShop.Models.Coupon> Coupon { get; set; }
     }
 }

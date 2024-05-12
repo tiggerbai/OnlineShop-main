@@ -9,95 +9,95 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnlineShop
 build_property.RootNamespace = OnlineShop
-build_property.ProjectDir = C:\Users\tigge\Downloads\OnlineShop\OnlineShop\OnlineShop\OnlineShop\
+build_property.ProjectDir = C:\Users\tigge\Downloads\OnlineShop-main-master (1)\OnlineShop-main-master\OnlineShopCMS-main\OnlineShop\OnlineShop\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\tigge\Downloads\OnlineShop\OnlineShop\OnlineShop\OnlineShop
+build_property.MSBuildProjectDirectory = C:\Users\tigge\Downloads\OnlineShop-main-master (1)\OnlineShop-main-master\OnlineShopCMS-main\OnlineShop\OnlineShop
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Cart/Index.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Home/About.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Home/Index.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Home/Privacy.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Home/Register.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Order/Checkout.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Order/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Order/Details.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Order/Index.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Order/ReviewOrder.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Order/ReviewOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUmV2aWV3T3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Products/Details.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Products/Index.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/Components/CategoriesList/Default.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/Components/CategoriesList/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcmllc0xpc3RcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/Error.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/_IndexLayout.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/_IndexLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JbmRleExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/_Layout.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/_TestLayout.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/_TestLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UZXN0TGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/_ViewImports.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tigge/Downloads/OnlineShop/OnlineShop/OnlineShop/OnlineShop/Views/_ViewStart.cshtml]
+[C:/Users/tigge/Downloads/OnlineShop-main-master (1)/OnlineShop-main-master/OnlineShopCMS-main/OnlineShop/OnlineShop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

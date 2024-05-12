@@ -13,6 +13,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web;
+using static Microsoft.AspNetCore.Razor.Language.TagHelperMetadata;
 
 
 namespace OnlineShopCMS.Controllers
@@ -61,6 +62,59 @@ namespace OnlineShopCMS.Controllers
 
             // 將處理過的促銷活動列表傳遞給視圖
             return View(promotions);
+        }
+
+        [HttpGet]
+        public IActionResult ListCoupon()
+        {
+            var coupons = _context.Coupon.ToList();
+            return View(coupons);
+        }
+
+        [HttpGet]
+        public IActionResult ListPromotions()
+        {
+            var coupons = _context.Coupon.ToList();
+            return View(coupons);
+        }
+
+
+
+
+        public async Task<IActionResult> EditCoupon(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var coupon = await _context.Coupon.FindAsync(id);
+            if (coupon == null)
+            {
+                return NotFound();
+            }
+            return View(coupon);
+        }
+
+
+        // GET: Coupons/Create
+        public IActionResult CreateCoupon()
+        {
+            return View();
+        }
+
+        // POST: Coupons/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateCoupon([Bind("Id,Code,DiscountAmount,ExpiryDate")] Coupon coupon)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(coupon);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(coupon);
         }
         // GET: Promotion/Create
         public IActionResult Create()

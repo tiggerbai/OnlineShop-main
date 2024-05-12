@@ -14,6 +14,8 @@ namespace OnlineShopCMS.Models
         public DateTime Time { get; set; }
         public int ProductID { get; set; }
         public Product Product { get; set; }
+        public int Rating { get; set; }
+
     }
 
 }

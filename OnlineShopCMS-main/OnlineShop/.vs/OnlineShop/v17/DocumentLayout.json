@@ -1,68 +1,80 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\",
+  "WorkspaceRootPath": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\data\\onlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\data\\onlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\views\\order\\revieworder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\revieworder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\views\\order\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\order\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\helpers\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\helpers\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\migrations\\onlineshopcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\data\\onlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\data\\onlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\order\\revieworder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\revieworder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\migrations\\onlineshopcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\migrations\\onlineshopcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./OnlineShop/True/SqlTable/dbo.Order.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\models\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\models\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop\\onlineshop\\onlineshop\\onlineshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\users\\tigge\\downloads\\onlineshop-main-master (1)\\onlineshop-main-master\\onlineshopcms-main\\onlineshop\\onlineshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -73,8 +85,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Products\\Details.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Products\\Details.cshtml",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAmwGgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-11T15:38:04.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\Product.cs",
+              "RelativeToolTip": "OnlineShop\\Models\\Product.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAjwCMAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:36:52.213Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -89,80 +127,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "OnlineShop\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "OnlineShop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAAGYAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T14:58:41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "OnlineShop\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "OnlineShop\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T13:07:21.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Checkout.cshtml",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\Checkout.cshtml",
-              "RelativeToolTip": "OnlineShop\\Views\\Order\\Checkout.cshtml",
-              "ViewState": "AQIAACwAAAAAAAAAAAAqwDkAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-20T10:48:02.708Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\Index.cshtml",
-              "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Index.cshtml",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\Index.cshtml",
-              "RelativeToolTip": "OnlineShop\\Views\\Order\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-12T07:18:15.005Z"
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "OnlineShop\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAIA1wE4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T06:20:53.038Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Products\\Index.cshtml",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAqwKIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T15:59:44.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T13:07:21.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Checkout.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Order\\Checkout.cshtml",
+              "ViewState": "AQIAACwAAAAAAAAAAAAqwDkAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-20T10:48:02.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Order\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T07:18:15.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Controllers\\OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\OrderController.cs",
               "RelativeToolTip": "OnlineShop\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAiwEkAAAAJAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAwwBcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T01:26:29.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "OnlineShopContext.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Data\\OnlineShopContext.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
               "RelativeToolTip": "OnlineShop\\Data\\OnlineShopContext.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAIAwwBIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T01:15:01.174Z"
+              "WhenOpened": "2024-04-12T01:15:01.174Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "dbo.Order [\u8CC7\u6599]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./OnlineShop/True/SqlTable/dbo.Order.sql",
               "ToolTip": "dbo.Order [\u8CC7\u6599]",
@@ -171,111 +227,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SessionHelper.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Helpers\\SessionHelper.cs",
-              "RelativeDocumentMoniker": "OnlineShop\\Helpers\\SessionHelper.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Helpers\\SessionHelper.cs",
-              "RelativeToolTip": "OnlineShop\\Helpers\\SessionHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T10:45:37.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "ReviewOrder.cshtml",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
               "RelativeToolTip": "OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
               "ViewState": "AQIAADEAAAAAAAAAAAA4wD8AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T11:41:34.639Z"
+              "WhenOpened": "2024-04-15T11:41:34.639Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Models\\Order.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\Order.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\Order.cs",
               "RelativeToolTip": "OnlineShop\\Models\\Order.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAkwDMAAAAjAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAkwDMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T01:34:00.797Z"
+              "WhenOpened": "2024-04-12T01:34:00.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\Details.cshtml",
-              "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Details.cshtml",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Views\\Order\\Details.cshtml",
-              "RelativeToolTip": "OnlineShop\\Views\\Order\\Details.cshtml",
-              "ViewState": "AQIAACMAAAAAAAAAAAAqwDUAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-20T10:48:28.964Z"
+              "DocumentIndex": 4,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\CartController.cs",
+              "RelativeToolTip": "OnlineShop\\Controllers\\CartController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAwCoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T09:40:53.467Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "OnlineShopContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
-              "RelativeToolTip": "OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T02:40:17.824Z"
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAGAAAAAAAAAAAMBSwGYAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T14:58:41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "OrderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Models\\OrderViewModel.cs",
-              "RelativeDocumentMoniker": "OnlineShop\\Models\\OrderViewModel.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Models\\OrderViewModel.cs",
-              "RelativeToolTip": "OnlineShop\\Models\\OrderViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAwwAcAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T01:56:44.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "OnlineShop\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Controllers\\CartController.cs",
-              "RelativeToolTip": "OnlineShop\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T09:40:53.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\appsettings.json",
-              "RelativeDocumentMoniker": "OnlineShop\\appsettings.json",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\appsettings.json",
-              "RelativeToolTip": "OnlineShop\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-12T07:52:11.634Z"
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "OnlineShop\\Views\\Order\\Details.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAqwDUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-20T10:48:28.964Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "OnlineShopContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
+              "RelativeToolTip": "OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAMBSwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T02:40:17.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Models\\OrderViewModel.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\OrderViewModel.cs",
+              "RelativeToolTip": "OnlineShop\\Models\\OrderViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwAcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T01:56:44.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\appsettings.json",
+              "RelativeDocumentMoniker": "OnlineShop\\appsettings.json",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\appsettings.json",
+              "RelativeToolTip": "OnlineShop\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-12T07:52:11.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\tigge\\Downloads\\OnlineShop-main-master (1)\\OnlineShop-main-master\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\HomeController.cs",
               "RelativeToolTip": "OnlineShop\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAowBcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T17:19:53.415Z"
+              "WhenOpened": "2024-04-12T17:19:53.415Z",
+              "EditorCaption": ""
             }
           ]
         }

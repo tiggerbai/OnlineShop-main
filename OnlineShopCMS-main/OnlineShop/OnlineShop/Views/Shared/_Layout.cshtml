@@ -15,6 +15,16 @@
 
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        $(document).ready(function () {
+            $('textarea').on('input', function () {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
@@ -38,8 +48,8 @@
         }
 
         .product-item {
-            flex: 0 0 auto; /* 不要在flex项目上放大，不要缩小，基础宽度由内容决定 */
-            width: 200px; /* 可以根据实际情况调整 */
+            flex: 0 0 auto; 
+            width: 200px; 
             margin-right: 10px;
             font-size: 12px;
             border: 1px solid #ccc;
@@ -61,6 +71,15 @@
             padding: 16px !important;
             background-color: white !important;
             min-height: 400px !important;
+            font-size: 16px;
+        }
+
+        .card-1 {
+            border: 1px solid #ccc !important;
+            border-radius: 20px !important;
+            padding: 16px !important;
+            background-color: white !important;
+            min-height: 100px !important;
             font-size: 16px;
         }
         /* 適應小屏幕，可選 */

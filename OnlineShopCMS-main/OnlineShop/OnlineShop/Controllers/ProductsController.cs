@@ -10,6 +10,7 @@ using OnlineShop.Data;
 using OnlineShop.Models;
 
 using Microsoft.AspNetCore.Authentication;
+using OnlineShop.Helpers;
 
 namespace OnlineShop.Controllers
 {
@@ -21,7 +22,7 @@ namespace OnlineShop.Controllers
         {
             _context = context;
         }
-
+    
 
 
         public async Task<IActionResult> Index(int? cId)
@@ -69,14 +70,15 @@ namespace OnlineShop.Controllers
 
         [HttpPost]
         [Authorize]  //一定要登入才能留言
-        public async Task<IActionResult> AddComment(int Id, string myComment)
+        public async Task<IActionResult> AddComment(int Id, string myComment, int rating)
         {
             var comment = new Comment()
             {
                 ProductID = Id,
                 Content = myComment,
                 UserName = HttpContext.User.Identity.Name,  //取得登入中的帳號
-                Time = DateTime.Now  //取得當下時間
+                Time = DateTime.Now,  //取得當下時間
+                Ratiing = rating
             };
             _context.Add(comment);
             await _context.SaveChangesAsync();
@@ -101,7 +103,9 @@ namespace OnlineShop.Controllers
 
             DetailViewModel dvm = new DetailViewModel
             {
-                Product = product
+                Product = product,
+               AverageRating = product.Comments.Count > 0 ? product.Comments.Average(c => c.Ratiing) : 0
+
             };
 
             if (product.Image != null)
@@ -135,6 +139,34 @@ namespace OnlineShop.Controllers
             string base64String = Convert.ToBase64String(image, 0, image.Length);
             string imgSrc = string.Format("data:image/png;base64,{0}", base64String);
         }
+
+        public IActionResult ApplyCoupon(string couponCode)
+        {
+            var coupon = _context.Coupon.FirstOrDefault(c => c.Code == couponCode);
+            if (coupon == null || coupon.ExpiryDate < DateTime.Now)
+            {
+                // 折價券無效，返回錯誤訊息
+                ViewBag.ErrorMessage = "Invalid coupon code";
+                return View(nameof(Index));
+            }
+
+            // 應用折價券的折扣
+            List<CartItem> CartItems = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+
+            if (CartItems != null)
+            {
+                var total = CartItems.Sum(m => m.SubTotal); // 計算商品總額
+                var discount = total * coupon.DiscountAmount / 100; // 計算折扣金額
+                ViewBag.Total = total - discount; // 應用折扣
+            }
+            else
+            {
+                ViewBag.Total = 0;
+            }
+
+            return View("Index", CartItems); // 返回 Index 視圖，並將 CartItems 作為模型
+        }
+
 
 
 

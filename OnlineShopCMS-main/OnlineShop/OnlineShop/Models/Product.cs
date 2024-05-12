@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace OnlineShop.Models
 {
     public class Product
@@ -32,6 +33,8 @@ namespace OnlineShop.Models
         public string Content { get; set; }   //留言內容
         public DateTime Time { get; set; }    //留言時間
         public int ProductID { get; set; }    //商品編號
+
+        public int Ratiing { get; set; }       //評分
     }
 
     public class Category

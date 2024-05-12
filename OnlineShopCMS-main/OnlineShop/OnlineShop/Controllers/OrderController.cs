@@ -187,7 +187,11 @@ namespace OnlineShop.Controllers
             }
             return orderItems;
         }
-       
+
+
+
+        #region 取消/退貨操作
+
         // 取消訂單
         public async Task<IActionResult> CancelOrder(int? Id)
         {
@@ -236,6 +240,8 @@ namespace OnlineShop.Controllers
 
             return RedirectToAction("Details", new { Id = orderId });
         }
+
+        #endregion
 
 
     }

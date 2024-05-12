@@ -11,6 +11,7 @@ namespace OnlineShop.Models
        
         public string imgsrc { get; set; }
 
+        public double AverageRating { get; set; }
 
 
 
