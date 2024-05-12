@@ -1,0 +1,214 @@
+﻿@model PaginatedList<OnlineShopCMS.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_ProductManagLayout.cshtml";
+
+}
+
+<!-- Main page content-->
+<div class="container-xl px-4 mt-n10" style="position:relative">
+
+
+
+    <div class="" style="min-height:45vh" style="padding:20px;">
+        <div class="card" style="border-radius:20px">
+            <div class="card-header card-subtitle" style="padding:20px;style=" min-height:45vh">
+                <div class="row">
+
+
+
+                    <div class="card" style="border-radius:20px;padding:30px;">
+
+
+                        <div class="row">
+
+
+
+                            <div class="card" style="border-radius:20px;padding:30px">
+
+
+
+
+
+                                <div class="row" style="border-radius: 30px;">
+                                    <div class="row col-10 justify-content-end">
+                                        <div class="col-12">
+                                            <div class="display-7" style="border-radius:10px; background-color:darkblue;">
+                                                <h1 style="color:white;padding:10px">商品列表</h1>
+                                            </div>
+                                            <div> <h3>| Products List</h3></div>
+
+
+
+                                            <div class="col-8">
+                                                <form asp-action="Index" class="col-12">
+                                                    <div class="input-group input-group-sm">
+                                                        <input class="form-control" type="text" placeholder="Name" name="searchString" />
+                                                        <div class="input-group-append">
+                                                            <input class="btn btn-primary" type="submit" value="Search" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1 justify-content-end">
+                                        <div class="row justify-content-end">
+                                            <a class="btn btn-primary btn-sm" style="padding-left: 20px; padding-right:20px;margin-top:20px;" asp-controller="Products" asp-action="Create">新增項目</a>
+                                        </div>
+                                        <div class="row justify-content-end mt-2">
+                                            <a class="btn btn-primary btn-sm" style="padding-left: 20px; padding-right: 20px;" asp-controller="Products" asp-action="CreateCategory">新增類別</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-footer">
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="name">
+                                                商品名稱
+                                            </th>
+                                            <th class="description">
+                                                類別
+                                            </th>
+                                            <th class="price">
+                                                單價
+                                            </th>
+                                            <th class="stock">
+                                                庫存
+                                            </th>
+                                            <th class="control"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Category.Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Price)
+                                                </td>
+                                                <td>
+                                                    @if (item.Stock > 0)
+                                                    {
+                                                        @Html.Raw("<span class=" + "\" badge bg-success text-white \"" + ">在庫中</span>")
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.Raw("<span class=" + "\" badge bg-warning text-dark \"" + ">缺貨中</span>")
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-light btn-sm" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                                    <a class="btn btn-light btn-sm" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                                    <form asp-action="DeleteConfirmed" asp-route-id="@item.Id" method="post" onsubmit="return confirm('確定要移除嗎?');">
+                                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                        <input name="__RequestVerificationToken" type="hidden" value="@Html.AntiForgeryToken()" />
+                                                    </form>
+
+
+
+
+
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                @{
+                    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+                }
+
+                <div class="d-flex justify-content-center">
+                    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn btn-default @prevDisabled">Previous</a>
+                    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn btn-default @nextDisabled">Next</a>
+                </div>
+
+                @section Scripts {
+                    <script>
+                        document.getElementById('deleteForm').onsubmit = function (event) {
+                            event.preventDefault(); // 阻止表單預設提交行為
+
+                            if (confirm('確定要移除嗎?')) {
+                                var form = this;
+                                fetch(form.action, {
+                                    method: 'POST',
+                                    body: new FormData(form),
+                                    headers: {
+                                        'RequestVerificationToken': document.querySelector('[name="__RequestVerificationToken"]').value
+                                    }
+                                })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        console.log('Success:', data);
+                                        window.location.href = '/Products/Index'; // 或其他適當的重定向
+                                    })
+                                    .catch((error) => {
+                                        console.error('Error:', error);
+                                    });
+                            }
+                        };
+                    </script>
+
+                }
+
+                <style>
+                    table.table-index {
+                        table-layout: fixed;
+                    }
+
+                    .name {
+                        width: 40%;
+                    }
+
+                    .description {
+                        width: 20%;
+                    }
+
+                    .overflow-text {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+
+                    .price, .stock {
+                        width: 10%;
+                    }
+
+                    .control {
+                        width: auto;
+                    }
+                </style>
+
+            </div>
+        </div>
+    </div>
+</div>

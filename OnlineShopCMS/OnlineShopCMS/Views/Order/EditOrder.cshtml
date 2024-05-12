@@ -1,0 +1,78 @@
+﻿@model OnlineShopCMS.Models.Order
+
+@{
+    ViewData["Title"] = "Edit Order";
+    Layout = "~/Views/Shared/_OrderManagLayout.cshtml";
+}
+
+<div class="container" style="position: absolute; left: 50%; transform: translateX(-50%);">
+    <div class="row" style="border-radius: 30px;">
+        <div class="col-lg-9">
+            <div class="container">
+                <div id="tooltips card">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="text-center">
+                                    <h1 class="display-6 font-weight-bolder fw-bolder" style="color:darkgoldenrod">
+                                        <i class="fas fa-shopping-bag"></i> 編輯訂單
+                                    </h1>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div class="btn-group" role="group" aria-label="Action Buttons">
+                                        <form asp-action="Details" asp-route-id="@Model.Id" method="get">
+                                            <button type="submit" class="btn btn-secondary btn-sm">返回明細</button>
+                                        </form>
+                                        <form asp-action="DeleteOrder" asp-route-id="@Model.Id" onsubmit="return confirm('Are you sure you want to delete this order?');" method="post">
+                                            <button type="submit" class="btn btn-danger btn-sm">刪除訂單</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form asp-action="EditOrder" method="post">
+                                <input type="hidden" asp-for="Id" />
+                                <!-- Include form fields for editing order details here -->
+                                <!-- For example: -->
+                                <div class="form-group">
+                                    <label asp-for="UserId"></label>
+                                    <input asp-for="UserId" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ReceiverName"></label>
+                                    <input asp-for="ReceiverName" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ReceiverAddress"></label>
+                                    <input asp-for="ReceiverAddress" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ReceiverPhone"></label>
+                                    <input asp-for="ReceiverPhone" class="form-control" />
+                                </div>
+                                <!-- Add more fields as needed -->
+
+
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row justify-content-center">
+                                <div class="col-3 text-center">
+                                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                                </div>
+                                <div class="col-3 text-center">
+                                    <button type="submit" form="editForm" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

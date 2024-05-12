@@ -1,0 +1,26 @@
+﻿@model List<OnlineShopCMS.Models.Order>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Is Shipped?</th>
+            <!-- 其他欄位 -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.UserId</td>
+                <td>@order.OrderDate</td>
+                <td>@order.ShippingDate</td>
+                <!-- 其他欄位 -->
+            </tr>
+        }
+    </tbody>
+</table>

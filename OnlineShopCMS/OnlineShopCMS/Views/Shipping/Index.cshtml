@@ -1,0 +1,24 @@
+﻿@model IEnumerable<OnlineShopCMS.Models.ShippingMethods>
+
+<h1>物流管理</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>名稱</th>
+            <th>描述</th>
+            <!-- 添加其他需要顯示的欄位 -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shippingMethod in Model)
+        {
+            <tr>
+                <td>@shippingMethod.Name</td>
+                <td>@shippingMethod.Description</td>
+                <!-- 添加其他需要顯示的欄位 -->
+            </tr>
+        }
+
+    </tbody>
+</table>

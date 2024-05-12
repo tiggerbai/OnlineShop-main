@@ -1,0 +1,240 @@
+﻿@model OnlineShop.Models.DetailViewModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .star {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+        .star:hover {
+            color: orange;
+        }
+
+    .card {
+        border: 1px solid #ccc !important;
+        border-radius: 20px !important;
+        padding: 16px !important;
+        background-color: white !important;
+        font-size: 16px;
+    }
+
+    .card-body #comment {
+        height: auto;
+        overflow: auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <!-- About Start -->
+            <!-- About Start -->
+            <div class="container-fluid py-5">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body"style="background-color:lightblue";>
+                            <div class="card" style="border-radius:20px box-shadow"; >
+
+                            <div class="row gx-5">
+                                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute w-100 h-100 rounded" src="@Html.DisplayFor(model => model.imgsrc)" alt="Product Image" style="object-fit: contain;">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="border-start border-5 border-primary ps-5 mb-5">
+                                        <h6 class="text-primary text-uppercase">Product Details</h6>
+                                        <h1 class="display-5 text-uppercase mb-0" id="product-name">@Model.Product.Name</h1>
+                                    </div>
+                                    <div class="bg-light p-4">
+                                        <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item w-50" role="presentation">
+                                                <button class="nav-link text-uppercase w-100 active" id="pills-description-tab" data-bs-toggle="pill" style="hyphens"
+                                                        data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description"
+                                                        aria-selected="true">
+                                                    商品詳細
+                                                </button>
+                                            </li>
+                                            <li class="nav-item w-50" role="presentation">
+                                                <button class="nav-link text-uppercase w-100" id="pills-detail-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-detail" type="button" role="tab" aria-controls="pills-detail"
+                                                        aria-selected="false">
+                                                    消費者評價
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+                                                <p class="card-text text-muted" id="product-description">@Model.Product.Description</p>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h4>建議售價:</h4>
+                                                        <p class="text-success" id="product-price">@Model.Product.Price</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h4>庫存:</h4>
+                                                        <p class="text-info" id="product-stock">@Model.Product.Stock</p>
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <h4>商品簡介:</h4>
+                                                <p class="text-justify" id="product-content">@Html.Raw(Model.Product.Content)</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-detail" role="tabpanel" aria-labelledby="pills-detail-tab">
+
+                                                <div class="col-md-6">
+                                                    <h4>平均評分:</h4>
+                                                    <div id="product-rating">
+                                                        @for (int i = 0; i < 5; i++)
+                                                        {
+                                                            if (i < Model.AverageRating)
+                                                            {
+                                                                <span class="fa fa-star checked"></span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="fa fa-star"></span>
+                                                            }
+                                                        }
+
+                                                        <style>
+                                                            .checked {
+                                                                color: orange;
+                                                            }
+
+                                                            .fa-star.checked {
+                                                                color: gold;
+                                                        </style>
+                                                    </div>
+                                                    <p class="text-info" id="product-rating">@Model.AverageRating</p>
+                                                </div>
+
+
+                                                <p class="mb-0">這裡添加其他商供應商所提供之商品資訊。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- About End -->
+
+                </div>
+                <p class="alert-light m-0">共 @Model.Product.Comments.Count 則留言</p>
+
+                <div class="container mt-3">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="comments-tab" data-bs-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="true">留言</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="add-comment-tab" data-bs-toggle="tab" href="#add-comment" role="tab" aria-controls="add-comment" aria-selected="false">新增留言</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="comments" role="tabpanel" aria-labelledby="comments-tab">
+                            @foreach (var comment in Model.Product.Comments)
+                            {
+                                <div class="row m-3 inner">
+                                    <div class="col-1">
+                                        <img src="~/image/person.png" class="img-thumbnail" />
+                                    </div>
+                                    <div class="col-11">
+
+                                        <div class="card-1" id="comment">
+                                            <div class="text-warning mb-2" style="font-size: 1.5em;">
+                                                @for (int i = 0; i < comment.Ratiing; i++)
+                                                {
+                                                    <span style="color:gold">★</span>
+                                                }
+                                            </div>
+                                            <h5 class="card-title">
+                                                <span class="font-weight-bold">@comment.UserName</span>
+                                                <span class="text-muted">． @comment.Time</span>
+                                            </h5>
+                                            <div class="card-body card-1">
+                                                <p class="card-text" style="height:auto; overflow: auto;">@comment.Content</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="tab-pane fade" id="add-comment" role="tabpanel" aria-labelledby="add-comment-tab">
+
+
+                            <div class="card">
+
+                                <form class="input-group" asp-action="AddComment" asp-route-Id="@Model.Product.Id">
+
+                                    <input type="hidden" name="productId" value="@Model.Product.Id" />
+                                    <div class="card-body">
+                                        <textarea class="form-control" type="text" placeholder="請先登入再留言" name="myComment"></textarea>
+                                        <div id="stars">
+                                            <span class="star" onclick="rateStar(1)">☆</span>
+                                            <span class="star" onclick="rateStar(2)">☆</span>
+                                            <span class="star" onclick="rateStar(3)">☆</span>
+                                            <span class="star" onclick="rateStar(4)">☆</span>
+                                            <span class="star" onclick="rateStar(5)">☆</span>
+                                        </div>
+                                        <input type="hidden" id="rating" name="rating" value="0" />
+                                        <label id="ratingLabel"></label>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <input class="btn btn-sm btn-primary" type="submit" value="送出留言" />
+
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+        </main>
+    </div>
+
+
+</body>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://kit.fontawesome.com/e8d28c4e09.js" crossorigin="anonymous"></script>
+
+    <script>
+        var rating = 0;
+        function rateStar(num) {
+            rating = num;
+            for (var i = 1; i <= 5; i++) {
+                if (i <= num) {
+                    document.getElementById("stars").children[i - 1].innerHTML = "★";
+                } else {
+                    document.getElementById("stars").children[i - 1].innerHTML = "☆";
+                }
+            }
+            document.getElementById("rating").value = num;
+            document.getElementById("ratingLabel").innerHTML = "您的評分: " + num + "顆星";
+        }
+
+
+    </script>
+
+
+}
+

@@ -1,0 +1,452 @@
+﻿@model OnlineShop.Models.ProductsByCategoryViewModel
+@using OnlineShop.Models
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+
+    <div class="row">
+        <div class="card">
+
+            <div class="row">
+
+
+                <div class="col-3" font-size: 24px;>
+                    <p></p>
+                    @await Component.InvokeAsync("CategoriesList")
+                </div>
+                <div class="col-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/image/mall-above20210201.png" class="d-block w-100" alt="..." />
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="~/image/20220518-官網商城banner_工作區域 1-1.jpg" class="d-block w-100" alt="..." />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="~/image/bt_0_247_01_p1_7_e2.jpg" class="d-block w-100" alt="..." />
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            @*<img src="~/image/banner1.jpg" />*@
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Products Section Start -->
+    <!-- Products Section Start -->
+    <div class="container-fluid py-5">
+        <!-- E-Commerce Services Start -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container-fluid py-5">
+                            <div class="container">
+                                <div class="row gx-5 align-items-center">
+                                    <!-- Align items vertically -->
+                                    <div class="col-lg-6 mb-5 mb-lg-0">
+                                        <div class="position-relative h-100">
+                                            <div id="productCarousel" class="carousel slide w-100 h-100" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- Online shopping related image -->
+                                                    <div class="carousel-item active">
+                                                        <img src="~/image/pf1.jpg" class="d-block w-100 rounded" alt="Online Selling" />
+
+                                                    </div>
+                                                    <!-- Product items -->
+                                                    <div class="carousel-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <img src="~/image/pf2.jpg" class="img-fluid rounded" alt="Bag 1" />
+
+                                                                <h5 class="mt-2">NO.1</h5>
+                                                                <p>廚房三件組-1</p>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <img src="~/image/pf3.jpg" class="img-fluid rounded" alt="Bag 2" />
+
+                                                                <h5 class="mt-2">NO.2</h5>
+                                                                <p>廚房三件組-2</p>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <img src="~/image/pf4.jpg" class="img-fluid rounded" alt="Bag 3" />
+
+
+                                                                <h5 class="mt-2">no.3</h5>
+                                                                <p>廚房三件組-3</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Add more carousel items for additional product displays -->
+                                                </div>
+                                                <!-- Previous and Next buttons -->
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="border-start border-5 border-primary ps-5 mb-5">
+                                            <h6 class="text-primary text-uppercase">本月主打商品</h6>
+                                            <h1 class="display-5 text-uppercase mb-0">Ensuring Your Shopping Experience is Exceptional</h1>
+                                        </div>
+
+                                        <div class="bg-light p-4">
+                                            <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item w-50" role="presentation">
+                                                    <button class="nav-link text-uppercase w-100 active" id="pills-1-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
+                                                            aria-selected="true">
+                                                        Our Mission
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item w-50" role="presentation">
+                                                    <button class="nav-link text-uppercase w-100" id="pills-2-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
+                                                            aria-selected="false">
+                                                        Our Vision
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                                                </div>
+                                                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- E-Commerce Services End -->
+    <br />
+    <br />
+
+
+    <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+        <h6 class="text-primary text-uppercase">Products</h6>
+        <h1 class="display-5 text-uppercase mb-0">Products For Your Best Friends</h1>
+    </div>
+
+
+    <div>
+        @foreach (var category in Model.ProductsByCategory)
+        {
+            <div>共 @ViewBag.count 筆資料</div>
+
+            <div class="rounded-container mb-4">
+                <!-- 新增一個容器用於設置圓角邊框 -->
+                <div class="category-container d-flex">
+                    <div class="category-title">
+                        <h2>@category.Key</h2>
+                    </div>
+                    <div class="owl-carousel portfolio-slider" style="width: 80%;">
+                        @foreach (var detail in category.Value)
+                        {
+                            <div class="item">
+                                <div class="col" style="margin:px;">
+                                    <div class="product-card h-80 w-180;">
+                                        <img src="@Url.Action("ProductImage", "Products", new { id = detail.Product.Id })" class="card-img-top " alt="@detail.Product.Name">
+                                        <div class="card-body">
+                                            <h5 class="card-title">@detail.Product.Name</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">Last updated 3 mins ago</small> 
+                                            <div class="button">
+                                                <a class="text-dark"
+                                                   asp-controller="Products" asp-action="Details" asp-route-Id="@detail.Product.Id">詳細</a>
+                                            </div>
+                                            <div class="button">
+
+                                                <a class="text-dark" onclick="ShowMessage()"
+                                                   asp-controller="Cart" asp-action="AddtoCart" asp-route-Id="@detail.Product.Id">加入購物車</a>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    </div>
+    </div>
+    <!-- Products Section End -->
+    <!-- Products Section End -->
+    <!-- Scripts -->
+
+
+</body>
+
+@section Scripts {
+    <script>
+        function ShowMessage() {
+            Swal.fire({
+                title: "Good job!",
+                text: "商品已加入購物車！",
+                icon: "success"
+            });
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            // 對每個輪播進行初始化
+            $('.portfolio-slider').each(function () {
+                $(this).owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    responsive: {
+                        0: { items: 1 },
+                        600: { items: 2 },
+                        1000: { items: 4 }
+                    },
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true
+                });
+            });
+        });
+    </script>
+}
+
+
+@section Styles {
+    <style>
+        .list-group-item {
+            background-color: #f8f9fa !important; /* 更改背景色 */
+            color: #212529 !important; /* 更改字體顏色 */
+            font-size: 18px; /* 更改字體大小 */
+        }
+
+
+        .rounded-container {
+            border-radius: 15px; /* 圓角邊框半徑 */
+            border: 1px solid #ccc; /* 圓角邊框顏色和寬度 */
+            padding: 15px; /* 內部填充 */
+        }
+
+        .product-container {
+            width: 100%; /* 產品容器寬度 */
+        }
+
+        .product-item {
+            margin: 20px;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            width: 200%;
+        }
+
+
+            .product-item img {
+                width: 200%; /* 圖片寬度和是容器 */
+                height: fit-content; /* 保持圖片原始比例 */
+                margin-bottom: 16px; /* 與下方內容間距 */
+            }
+
+            .product-item h6, .product-item h5 {
+                margin: 0 0 8px 0; /* 邊距 */
+            }
+
+        .btn-action {
+            justify-content: center; /* 按钮水平居中 */
+        }
+
+            /* 按鈕等寬，提供统一的視覺效果 */
+            .btn-action a {
+                width: 48%; /* 按钮寬度 */
+                margin: 0 1%; /* 兩側留微距 */
+            }
+
+        .products-background {
+            background-color: #f9f9f9;
+            padding: 20px 0; /* Top and bottom padding */
+        }
+
+        .category-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; /* 間距 */
+        }
+
+        .category {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .category-title {
+            flex: 1;
+            max-width: 16%; /* 限制標題佔據的最大寬 */
+        }
+
+        .category-header h2 {
+            margin-right: 20px;
+        }
+
+        .owl-carousel.portfolio-slider {
+            flex: 3;
+            /* 輪播外觀 */
+        }
+
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 16px;
+            background-color: white;
+            min-height: 400px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 16px;
+            background-color: white;
+            height: 400px;
+            width: 225px;
+           
+        }
+
+        .product-card-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 150px; /* 你可以根據需要調整這個值 */
+            width: 100%;
+        }
+
+        .more-card {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+
+        .custom-width {
+            width: 120%;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+
+
+        .category-title, .product-grid {
+            flex-basis: 100%;
+            padding-right: 0;
+            border-right: none;
+            padding-left: 0;
+            font-size: 24px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 動態列數，基於容器寬度 */
+            gap: 20px; /* 項目間距 */
+            border-radius: 20px;
+        }
+
+
+        @@Media (max-width: 768px) .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .more-card {
+        grid-column: span 2;
+    }
+
+}</style>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

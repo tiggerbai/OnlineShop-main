@@ -1,0 +1,114 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>aspnet-OnlineShop-D8788109-8573-4F7A-8F48-297D60434815</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\bootstrap\dist\css - 複製\**" />
+    <Compile Remove="wwwroot\lib\bootstrap\dist\css\**" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css - 複製\**" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\dist\css - 複製\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\dist\css\**" />
+    <None Remove="wwwroot\lib\bootstrap\dist\css - 複製\**" />
+    <None Remove="wwwroot\lib\bootstrap\dist\css\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\animate.min.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\datepicker.css" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\icofont.css" />
+    <None Include="wwwroot\css\magnific-popup.css" />
+    <None Include="wwwroot\css\nice-select.css" />
+    <None Include="wwwroot\css\normalize.css" />
+    <None Include="wwwroot\css\owl-carousel.css" />
+    <None Include="wwwroot\css\responsive.css" />
+    <None Include="wwwroot\css\slicknav.min.css" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\icofont.eot" />
+    <None Include="wwwroot\fonts\icofont.svg" />
+    <None Include="wwwroot\fonts\icofont.ttf" />
+    <None Include="wwwroot\fonts\icofont.woff" />
+    <None Include="wwwroot\fonts\icofont.woff2" />
+    <None Include="wwwroot\image\about-img.jpg" />
+    <None Include="wwwroot\image\author1.jpg" />
+    <None Include="wwwroot\image\author2.jpg" />
+    <None Include="wwwroot\image\author3.jpg" />
+    <None Include="wwwroot\image\blockqoute-bg.jpg" />
+    <None Include="wwwroot\image\blog-sidebar1.jpg" />
+    <None Include="wwwroot\image\blog-sidebar2.jpg" />
+    <None Include="wwwroot\image\blog-sidebar3.jpg" />
+    <None Include="wwwroot\image\blog1.jpg" />
+    <None Include="wwwroot\image\blog2.jpg" />
+    <None Include="wwwroot\image\blog3.jpg" />
+    <None Include="wwwroot\image\bread-bg.jpg" />
+    <None Include="wwwroot\image\call-bg.jpg" />
+    <None Include="wwwroot\image\client-bg.jpg" />
+    <None Include="wwwroot\image\client1.png" />
+    <None Include="wwwroot\image\client2.png" />
+    <None Include="wwwroot\image\client3.png" />
+    <None Include="wwwroot\image\client4.png" />
+    <None Include="wwwroot\image\client5.png" />
+    <None Include="wwwroot\image\contact-img.png" />
+    <None Include="wwwroot\image\favicon.png" />
+    <None Include="wwwroot\image\fun-bg.jpg" />
+    <None Include="wwwroot\image\logo.png" />
+    <None Include="wwwroot\image\map-marker.png" />
+    <None Include="wwwroot\image\mission-img.jpg" />
+    <None Include="wwwroot\image\pf1.jpg" />
+    <None Include="wwwroot\image\pf2.jpg" />
+    <None Include="wwwroot\image\pf3.jpg" />
+    <None Include="wwwroot\image\pf4.jpg" />
+    <None Include="wwwroot\image\section-img.png" />
+    <None Include="wwwroot\image\signup-bg.jpg" />
+    <None Include="wwwroot\image\slider.jpg" />
+    <None Include="wwwroot\image\slider2.jpg" />
+    <None Include="wwwroot\image\slider3.jpg" />
+    <None Include="wwwroot\image\testi-bg.jpg" />
+    <None Include="wwwroot\image\video-bg.jpg" />
+    <None Include="wwwroot\js\bootstrap-datepicker.js" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\colors.js" />
+    <None Include="wwwroot\js\easing.js" />
+    <None Include="wwwroot\js\gmaps.min.js" />
+    <None Include="wwwroot\js\jquery-migrate-3.0.0.js" />
+    <None Include="wwwroot\js\jquery-ui.min.js" />
+    <None Include="wwwroot\js\jquery.counterup.min.js" />
+    <None Include="wwwroot\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\jquery.nav.js" />
+    <None Include="wwwroot\js\jquery.scrollUp.min.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\map-active.js" />
+    <None Include="wwwroot\js\niceselect.js" />
+    <None Include="wwwroot\js\owl-carousel.js" />
+    <None Include="wwwroot\js\popper.min.js" />
+    <None Include="wwwroot\js\slicknav.min.js" />
+    <None Include="wwwroot\js\steller.js" />
+    <None Include="wwwroot\js\tilt.jquery.min.js" />
+    <None Include="wwwroot\js\wow.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="MediaTypeMap.Core" Version="2.3.3" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="17.9.5" />
+    <PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.29" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.29" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.29" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.29" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.29" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\AdmAnno\" />
+  </ItemGroup>
+</Project>

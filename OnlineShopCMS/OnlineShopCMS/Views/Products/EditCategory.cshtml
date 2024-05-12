@@ -1,0 +1,69 @@
+﻿@model OnlineShopCMS.Models.Category
+
+@{
+    ViewData["Title"] = "EditOrder Category";
+    Layout = "~/Views/Shared/_ProductManagLayout.cshtml";
+
+}
+<div class="container-xl px-4 mt-n10">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+
+            <div class="card" style="border-radius:40px">
+                <div class="card-header">
+
+                    <div class="text-center" style="border-radius:20px; padding:10px; background-color:darkblue">
+                        <div class="bg-transparent text-center"style="background-color:darkblue">
+                            <h1 class="display-7 font-weight-bolder fw-bolder" style="color:white">
+                                <i class="fas fa-shopping-bag"></i> 更新品類資訊
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="mb-4">請輸入更新資料</h2>
+                    <h4 class="mb-3">品類物件詳情</h4>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form asp-action="EditCategory">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+
+                                <input type="hidden" asp-for="Id" />
+
+                                <div class="form-group">
+                                    <label asp-for="Name" class="control-label">Category Name</label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Description" class="control-label">Description</label>
+                                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <button type="submit" class="btn btn-primary mr-2">Save</button>
+                                    <a asp-action="ListCategories" class="btn btn-secondary">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

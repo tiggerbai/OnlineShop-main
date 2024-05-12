@@ -1,0 +1,71 @@
+﻿body {
+}
+/* General sidenav styles */
+.sidenav {
+  background-color: #f8f9fa; /* Light grey background for a subtle effect */
+  border-right: 1px solid #dee2e6; /* Adds a border to the right of the sidenav */
+}
+
+.sidenav-menu {
+  padding-top: 1rem;
+}
+
+/* Style the nav-item */
+.sidenav .nav-item {
+  margin-bottom: 0.5rem;
+}
+
+/* Style the nav-link */
+.sidenav .nav-link {
+  color: #333; /* Darker text for better readability */
+  padding: 0.75rem 1.25rem; /* Spacing within the links */
+  border-radius: 0.25rem; /* Slight rounding of corners for the links */
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+  /* Hover effect for nav-link */
+  .sidenav .nav-link:hover,
+  .sidenav .nav-link:focus {
+    background-color: #e2e6ea; /* Slight change in background on hover */
+    text-decoration: none; /* Remove text underline on hover */
+    color: #0056b3; /* Color change for text on hover */
+  }
+
+  /* Style the active nav-link */
+  .sidenav .nav-link.active {
+    color: #fff; /* White text for active link */
+    background-color:azure; /* Blue background for active link */
+
+  }
+
+/* Dropdown menu styles */
+.sidenav .dropdown-menu {
+  border: 0; /* Remove border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Slight shadow for dropdown */
+}
+
+.sidenav .dropdown-item {
+  color: #333; /* Darker text for better readability */
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+  .sidenav .dropdown-item:hover,
+  .sidenav .dropdown-item:focus {
+    background-color: #e2e6ea; /* Slight change in background on hover */
+    color: #0056b3; /* Color change for text on hover */
+  }
+
+/* Footer styles */
+.sidenav-footer {
+  padding: 1rem;
+  background-color: #f8f9fa; /* Light grey background for the footer */
+  border-top: 1px solid #dee2e6; /* Adds a border at the top of the footer */
+}
+
+.sidenav-footer-title {
+  font-weight: bold; /* Bold text for the user's name */
+}
+
+.sidenav-footer-subtitle {
+  color: #6c757d; /* Subtle color for the footer subtitle */
+}

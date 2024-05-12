@@ -1,0 +1,297 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js" integrity="sha512-VF4Wflq+Wrt/8tiZgCz0JkC2V8q+EX58X+g5Qg5BZ7C6Z2m6M1hqPb1RRaQ6/0/9eZeZD1kR13s8cGMRN0evJQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Title -->
+    <title>@ViewData["Title"] - OnlineShop</title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/image/favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/fontawesome-free-5.15.4-web/css/all.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js" integrity="sha512-VF4Wflq+Wrt/8tiZgCz0JkC2V8q+EX58X+g5Qg5BZ7C6Z2m6M1hqPb1RRaQ6/0/9eZeZD1kR13s8cGMRN0evJQ==" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
+    <script src="https://kit.fontawesome.com/e8d28c4e09.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="@Url.Content("~/css/bootstrap.min.css")" rel="stylesheet" />
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.min.css")">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/nice-select.css")">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/font-awesome.min.css")">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/icofont.css")">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="@Url.Content("~/css/slicknav.min.css")">
+    <!-- Owl Carousel CSS -->
+    <link href="~/css/owl-carousel.css" rel="stylesheet" />
+    <link rel="stylesheet" href="@Url.Content("~/css/owl-carousel.css")">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/datepicker.css")">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/animate.min.css")">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/magnific-popup.css")">
+
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/normalize.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/responsive.css")">
+    <link rel="stylesheet" href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/site.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/fontawesome-free-5.15.4-web/css/all.css")">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/e8d28c4e09.js" crossorigin="anonymous"></script>
+    <style>
+        .clients {
+            background-image: url('../image/client-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0px;
+            position: relative;
+        }
+
+            .clients .single-clients img {
+                width: 100%;
+                cursor: pointer;
+                text-align: center;
+                float: none;
+                padding: 0 35px;
+            }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Header Area -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="@Url.Content("~/image/logo4.jpg")" class="logo" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
+                    <ul class="navbar-nav flex-grow-1  nav-pills">
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Board" asp-action="Index">公告</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">店鋪資訊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">線上商店</a>
+                        </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" asp-controller="Order" asp-action="Index">我的訂單</a>
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+                <form class="d-flex justify-content-end pl-3">
+                    <button class="btn btn-outline-dark" type="submit" asp-area="" asp-controller="Cart" asp-action="Index">
+                        <i class="fas fa-shopping-cart"></i>
+                        購物車
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header Area -->
+    <main>
+
+
+        @RenderBody()
+
+
+
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer id="footer" class="footer " style="position:relative">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>關於我們</h2>
+                            <!-- Social -->
+                            <ul class="social">
+                                <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                <li><a href="#"><i class="icofont-google-plus"></i></a></li>
+                                <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                <li><a href="#"><i class="icofont-vimeo"></i></a></li>
+                                <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                            </ul>
+                            <!-- End Social -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer f-link">
+                            <h2>快速連結</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>首頁</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>關於我們</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>服務</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>產品</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>其他連結</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>諮詢</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>財務</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>客戶評價</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>常見問題</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>聯絡我們</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>營業時間</h2>
+                            <p>我們的線上商店全年無休，隨時為您服務。</p>
+                            <ul class="time-sidual">
+                                <li class="day">周一至周五 <span>全天</span></li>
+                                <li class="day">周六 <span>全天</span></li>
+                                <li class="day">周日 <span>全天</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>電子報</h2>
+                            <p>訂閱我們的電子報，以獲得最新的商品資訊和優惠。</p>
+                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                                <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Your email address'" required="" type="email">
+                                <button class="button"><i class="icofont icofont-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="copyright-content">
+                            <p>© Copyright 2022  |  All Rights Reserved by <a href="https://www.yourwebsite.com" target="_blank">yourwebsite.com</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Copyright -->
+    </footer>
+    <!--/ End Footer Area -->
+
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 2000, // in milliseconds
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="@Url.Content("~/js/site.js")" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Jquery JS -->
+    <script src="@Url.Content("~/js/jquery-3.2.1.min.js")"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="@Url.Content("~/js/jquery-migrate-3.0.0.js")"></script>
+    <!-- jquery Ui JS -->
+    <script src="@Url.Content("~/js/jquery-ui.min.js")"></script>
+    <!-- Easing JS -->
+    <script src="@Url.Content("~/js/easing.js")"></script>
+    <!-- Color JS -->
+    <script src="@Url.Content("~/js/colors.js")"></script>
+    <!-- Popper JS -->
+    <script src="@Url.Content("~/js/popper.min.js")"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="@Url.Content("~/js/bootstrap-datepicker.js")"></script>
+    <!-- Jquery Nav JS -->
+    <script src="@Url.Content("~/js/jquery.nav.js")"></script>
+    <!-- Slicknav JS -->
+    <script src="@Url.Content("~/js/slicknav.min.js")"></script>
+    <!-- ScrollUp JS -->
+    <script src="@Url.Content("~/js/jquery.scrollUp.min.js")"></script>
+    <!-- Niceselect JS -->
+    <script src="@Url.Content("~/js/niceselect.js")"></script>
+    <!-- Tilt Jquery JS -->
+    <script src="@Url.Content("~/js/tilt.jquery.min.js")"></script>
+    <!-- Owl Carousel JS -->
+    <script src="@Url.Content("~/js/owl-carousel.js")"></script>
+    <!-- counterup JS -->
+    <script src="@Url.Content("~/js/jquery.counterup.min.js")"></script>
+    <!-- Steller JS -->
+    <script src="@Url.Content("~/js/steller.js")"></script>
+    <!-- Wow JS -->
+    <script src="@Url.Content("~/js/wow.min.js")"></script>
+    <!-- Magnific Popup JS -->
+    <script src="@Url.Content("~/js/jquery.magnific-popup.min.js")"></script>
+    <!-- Counter Up CDN JS -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="@Url.Content("~/js/bootstrap.min.js")"></script>
+    <!-- Main JS -->
+    <script src="@Url.Content("~/js/main.js")"></script>
+</body>
+</html>
