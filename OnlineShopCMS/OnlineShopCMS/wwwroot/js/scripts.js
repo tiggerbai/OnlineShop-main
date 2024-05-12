@@ -1,4 +1,5 @@
 /*!
+<<<<<<< HEAD
     * Start Bootstrap - SB Admin Pro v2.0.5 (https://shop.startbootstrap.com/product/sb-admin-pro)
     * Copyright 2013-2023 Start Bootstrap
     * Licensed under SEE_LICENSE (https://github.com/StartBootstrap/sb-admin-pro/blob/master/LICENSE)
@@ -18,12 +19,24 @@
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl);
     });
+=======
+    * Start Bootstrap - SB Admin v7.0.3 (https://startbootstrap.com/template/sb-admin)
+    * Copyright 2013-2021 Start Bootstrap
+    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
+    */
+    // 
+// Scripts
+// 
+
+window.addEventListener('DOMContentLoaded', event => {
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
     // Toggle the side navigation
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
     if (sidebarToggle) {
         // Uncomment Below to persist sidebar toggle between refreshes
         // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+<<<<<<< HEAD
         //     document.body.classList.toggle('sidenav-toggled');
         // }
         sidebarToggle.addEventListener('click', event => {
@@ -73,4 +86,15 @@
         }
         targetAnchor.classList.add('active');
     });
+=======
+        //     document.body.classList.toggle('sb-sidenav-toggled');
+        // }
+        sidebarToggle.addEventListener('click', event => {
+            event.preventDefault();
+            document.body.classList.toggle('sb-sidenav-toggled');
+            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+        });
+    }
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 });

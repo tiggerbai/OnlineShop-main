@@ -1,4 +1,5 @@
 ﻿@model OnlineShop.Models.DetailViewModel
+<<<<<<< HEAD
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -29,6 +30,8 @@
     }
 </style>
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 <body>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,6 +39,7 @@
             <!-- About Start -->
             <div class="container-fluid py-5">
                 <div class="container">
+<<<<<<< HEAD
                     <div class="card">
                         <div class="card-body"style="background-color:lightblue";>
                             <div class="card" style="border-radius:20px box-shadow"; >
@@ -205,10 +209,81 @@
                         </div>
                     </div>
                 </div>
+=======
+                    <div class="row gx-5">
+                        <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded" src="@Html.DisplayFor(model => model.imgsrc)" alt="Product Image" style="object-fit: contain;">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="border-start border-5 border-primary ps-5 mb-5">
+                                <h6 class="text-primary text-uppercase">Product Details</h6>
+                                <h1 class="display-5 text-uppercase mb-0" id="product-name">@Model.Product.Name</h1>
+                            </div>
+                            <p class="card-text text-muted" id="product-description">@Model.Product.Description</p>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Price:</h4>
+                                    <p class="text-success" id="product-price">@Model.Product.Price</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Stock:</h4>
+                                    <p class="text-info" id="product-stock">@Model.Product.Stock</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <h4>Content:</h4>
+                            <p class="text-justify" id="product-content">@Model.Product.Content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <p class="alert-light m-0">共 @Model.Product.Comments.Count 則留言</p>
+
+            <div class="container mt-3">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="comments-tab" data-bs-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="true">留言</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="add-comment-tab" data-bs-toggle="tab" href="#add-comment" role="tab" aria-controls="add-comment" aria-selected="false">新增留言</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="comments" role="tabpanel" aria-labelledby="comments-tab">
+                        @foreach (var comment in Model.Product.Comments)
+                        {
+                            <div class="row m-3">
+                                <div class="col-1"><img src="~/image/person.png" /></div>
+                                <div class="col-11" style="background-color: #f8f9fa">
+                                    <p>
+                                        <span class="font-weight-bold">@comment.UserName</span>
+                                        <span class="text-muted">． @comment.Time</span>
+                                    </p>
+                                    <p>@comment.Content</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="tab-pane fade" id="add-comment" role="tabpanel" aria-labelledby="add-comment-tab">
+                        <form class="input-group" asp-action="AddComment" asp-route-Id="@Model.Product.Id">
+                            <textarea class="form-control" type="text" placeholder="請先登入再留言" name="myComment"></textarea>
+                            <input class="btn btn-sm btn-primary" type="submit" value="送出" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
         </main>
     </div>
 
+<<<<<<< HEAD
 
 </body>
 @section Scripts {
@@ -238,3 +313,6 @@
 
 }
 
+=======
+</body>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0

@@ -2,7 +2,11 @@
 
 @{
     ViewData["Title"] = "RoleList";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_UserManagLayout.cshtml";
+=======
+    Layout = "~/Views/Shared/_Layout.cshtml";
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 }
 
 <h1>角色列表</h1>
@@ -26,6 +30,7 @@
         </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
         @if (Model != null)
         {
             foreach (var item in Model)
@@ -42,6 +47,21 @@
                     </td>
                 </tr>
             }
+=======
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    <a class="btn btn-light btn-sm" style="padding-left:20px;padding-right:20px;" asp-action="EditRole" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         }
     </tbody>
 </table>

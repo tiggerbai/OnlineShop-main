@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+<<<<<<< HEAD
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using static OnlineShop.Models.Order;
+=======
+using System.Linq;
+using System.Threading.Tasks;
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 namespace OnlineShop.Models
 {
     public class Order
     {
+<<<<<<< HEAD
         public Order()
         {
             // 預設為 "未出貨" 狀態
@@ -50,21 +56,46 @@ namespace OnlineShop.Models
         Shipped,
         Delivered,
         Cancelled
+=======
+        [DisplayFormat(DataFormatString = "{0:000000}")]
+        public int Id { get; set; }
+
+        public DateTime OrderDate { get; set; }
+        public string UserId { get; set; }
+        public string UserName { get; set; }
+        public int Total { get; set; }
+
+        [Required]
+        public string ReceiverName { get; set; }
+        [Required]
+        public string ReceiverAdress { get; set; }
+        [Required]
+        public string ReceiverPhone { get; set; }
+
+        public bool isPaid { get; set; }
+        public List<OrderItem> OrderItem { get; set; }
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 
     public class OrderItem
     {
+<<<<<<< HEAD
        
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         public int Id { get; set; }
         public int OrderId { get; set; }
         public int ProductId { get; set; }
         public int Amount { get; set; }
         public int SubTotal { get; set; }
+<<<<<<< HEAD
         public bool IsReturned { get; set; }
       
 
 
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 
     public class CartItem : OrderItem
@@ -80,6 +111,9 @@ namespace OnlineShop.Models
 
         public Product Product { get; set; }
         public string imageSrc { get; set; }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 }

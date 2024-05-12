@@ -22,20 +22,29 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<OnlineShopUser> _signInManager;
         private readonly UserManager<OnlineShopUser> _userManager;
+<<<<<<< HEAD
         private readonly RoleManager<IdentityRole> _roleManager;
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<OnlineShopUser> userManager,
             SignInManager<OnlineShopUser> signInManager,
+<<<<<<< HEAD
             RoleManager<IdentityRole> roleManager,
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+<<<<<<< HEAD
             _roleManager = roleManager;
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             _logger = logger;
             _emailSender = emailSender;
         }
@@ -49,7 +58,10 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -95,9 +107,14 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
                 var user = new OnlineShopUser
                 {
                     UserName = Input.Email,
+=======
+                var user = new OnlineShopUser { 
+                    UserName = Input.Email, 
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     Email = Input.Email,
                     Name = Input.Name,
                     DOB = Input.DOB,
@@ -107,7 +124,11 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
+<<<<<<< HEAD
                     _userManager.AddToRoleAsync(user, "User").Wait(); // 將 "Administrator" 改為 "User"
+=======
+                    _userManager.AddToRoleAsync(user, "User").Wait(); //加入角色
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

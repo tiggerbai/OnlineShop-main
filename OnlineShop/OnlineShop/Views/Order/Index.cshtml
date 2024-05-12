@@ -16,15 +16,21 @@
                 <th>訂單日期：@Html.DisplayFor(modelItem => item.Order.OrderDate)</th>
                 <th>金額</th>
                 <th>付款狀態</th>
+<<<<<<< HEAD
                 <th>配送狀態</th>                
                 <th>訂單狀態</th>
                 <th>訂單明細</th>
                
+=======
+                <th>配送狀態</th>
+                <th></th>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td colspan="2">
+<<<<<<< HEAD
                     @if (item.CartItems.Any())
                     {
                         foreach (var citem in item.CartItems)
@@ -35,6 +41,10 @@
                     else
                     {
                         <p>No items in the order</p>
+=======
+                    @foreach(var citem in item.CartItems) { 
+                        <p>@Html.DisplayFor(cartItem => citem.Product.Name)</p>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     }
                 </td>
                 <td>
@@ -51,11 +61,17 @@
                     }
                 </td>
                 <td>未出貨</td>
+<<<<<<< HEAD
                 <td>@Html.DisplayFor(modelItem => item.Order.OrderStatus)</td>
                 <td>
                     <a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@item.Order.Id">訂單詳細資訊</a>
                 </td>
 
+=======
+                <td>
+                    <a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@item.Order.Id">訂單詳細資訊</a>
+                </td>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             </tr>
         </tbody>
     </table>

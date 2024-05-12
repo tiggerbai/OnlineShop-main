@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\OnlineShop.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
         "packagesPath": "C:\\Users\\tigge\\.nuget\\packages\\",
         "outputPath": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\obj\\",
+=======
+    "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
+        "projectName": "OnlineShop",
+        "projectPath": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
+        "packagesPath": "C:\\Users\\tigge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tigge\\Downloads\\OnlineShop\\OnlineShop\\OnlineShop\\obj\\",
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +36,11 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
+<<<<<<< HEAD
           "net6.0"
+=======
+          "net5.0"
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +48,13 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
+<<<<<<< HEAD
           "net6.0": {
             "targetAlias": "net6.0",
+=======
+          "net5.0": {
+            "targetAlias": "net5.0",
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             "projectReferences": {}
           }
         },
@@ -47,8 +70,13 @@
         }
       },
       "frameworks": {
+<<<<<<< HEAD
         "net6.0": {
           "targetAlias": "net6.0",
+=======
+        "net5.0": {
+          "targetAlias": "net5.0",
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -60,6 +88,7 @@
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[6.0.29, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
@@ -85,10 +114,34 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+=======
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             },
             "PayPalCheckoutSdk": {
               "target": "Package",
               "version": "[1.0.4, )"
+<<<<<<< HEAD
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -101,6 +154,8 @@
             "Serilog.Sinks.File": {
               "target": "Package",
               "version": "[5.0.0, )"
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             }
           },
           "imports": [
@@ -122,7 +177,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         }
       }
     }

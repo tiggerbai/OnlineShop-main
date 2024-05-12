@@ -42,25 +42,43 @@ namespace OnlineShopCMS.Controllers
             {
                 result = result.Where(s => s.Name.Contains(searchString));
             }
+<<<<<<< HEAD
             var userName = User.Identity.Name;
             ViewData["UserName"] = userName;
+=======
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             int pageSize = 5;
             return View(await PaginatedList<Product>.CreateAsync(result.Include(p => p.Category).AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
+<<<<<<< HEAD
         // GET: Products/Details/
         public async Task<IActionResult> Details(int? id)
         {
+=======
+        // GET: Products/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            DetailViewModel dvm = new DetailViewModel();
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             if (id == null)
             {
                 return NotFound();
             }
 
+<<<<<<< HEAD
             DetailViewModel dvm = new DetailViewModel();  
 
             var product = await _context.Product
                         .Include(p => p.Category)
                         .FirstOrDefaultAsync(m => m.Id == id);
+=======
+            var product = await _context.Product
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(m => m.Id == id);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             if (product == null)
             {
                 return NotFound();
@@ -73,8 +91,15 @@ namespace OnlineShopCMS.Controllers
                     dvm.imgsrc = ViewImage(product.Image);
                 }
             }
+<<<<<<< HEAD
             return View(dvm); 
         }
+=======
+
+            return View(dvm);
+        }
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         // GET: Products/Create
         public IActionResult Create()
         {
@@ -82,7 +107,13 @@ namespace OnlineShopCMS.Controllers
             return View();
         }
 
+<<<<<<< HEAD
        
+=======
+        // POST: Products/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,Content,Price,Stock,Image,CategoryId")] Product product, IFormFile myimg)
@@ -106,7 +137,11 @@ namespace OnlineShopCMS.Controllers
             return View(product);
         }
 
+<<<<<<< HEAD
         // GET: Products/EditOrder/5
+=======
+        // GET: Products/Edit/5
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -131,13 +166,22 @@ namespace OnlineShopCMS.Controllers
             return View(product);
         }
 
+<<<<<<< HEAD
       
+=======
+        // POST: Products/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Content,Price,Stock,Image,CategoryId")] Product product, IFormFile myimg)
         {
+<<<<<<< HEAD
             var prod = new Product();
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             if (id != product.Id)
             {
                 return NotFound();
@@ -147,15 +191,35 @@ namespace OnlineShopCMS.Controllers
             {
                 try
                 {
+<<<<<<< HEAD
+=======
+                    var productToUpdate = await _context.Product.FindAsync(id);
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     if (myimg != null)
                     {
                         using (var ms = new MemoryStream())
                         {
                             myimg.CopyTo(ms);
+<<<<<<< HEAD
                             product.Image = ms.ToArray();
                         }
                     }
                     _context.Update(product);
+=======
+                            productToUpdate.Image = ms.ToArray();
+                        }
+                    }
+
+                    productToUpdate.Name = product.Name;
+                    productToUpdate.Description = product.Description;
+                    productToUpdate.Content = product.Content;
+                    productToUpdate.Price = product.Price;
+                    productToUpdate.Stock = product.Stock;
+                    productToUpdate.CategoryId = product.CategoryId;
+
+                    _context.Update(productToUpdate);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -182,12 +246,19 @@ namespace OnlineShopCMS.Controllers
                 return NotFound();
             }
 
+<<<<<<< HEAD
             var product = await _context.Product.FindAsync(id);
+=======
+            var product = await _context.Product
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(m => m.Id == id);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             if (product == null)
             {
                 return NotFound();
             }
 
+<<<<<<< HEAD
             _context.Product.Remove(product);
             await _context.SaveChangesAsync();
 
@@ -220,6 +291,22 @@ namespace OnlineShopCMS.Controllers
 
 
 
+=======
+            return View(product);
+        }
+
+        // POST: Products/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var product = await _context.Product.FindAsync(id);
+            _context.Product.Remove(product);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         public IActionResult CreateCategory()
         {
             return View();
@@ -233,6 +320,7 @@ namespace OnlineShopCMS.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         public async Task<IActionResult> ListCategories(int? id)
         {
             var categories = await _context.Category.ToListAsync();
@@ -306,6 +394,8 @@ namespace OnlineShopCMS.Controllers
         }
 
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
         private bool ProductExists(int id)
         {
@@ -316,8 +406,12 @@ namespace OnlineShopCMS.Controllers
         {
             string base64String = Convert.ToBase64String(arrayImage, 0, arrayImage.Length);
             return "data:image/png;base64," + base64String;
+<<<<<<< HEAD
 
         }
 
+=======
+        }
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 }

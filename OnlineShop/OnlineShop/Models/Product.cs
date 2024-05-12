@@ -5,7 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 namespace OnlineShop.Models
 {
     public class Product
@@ -33,8 +36,11 @@ namespace OnlineShop.Models
         public string Content { get; set; }   //留言內容
         public DateTime Time { get; set; }    //留言時間
         public int ProductID { get; set; }    //商品編號
+<<<<<<< HEAD
 
         public int Ratiing { get; set; }       //評分
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 
     public class Category

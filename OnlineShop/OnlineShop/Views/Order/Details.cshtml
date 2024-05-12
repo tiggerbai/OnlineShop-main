@@ -4,6 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
+<<<<<<< HEAD
 <style>
     @@keyframes bounceOut {
         20% {
@@ -26,6 +27,8 @@
     }
 </style>
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 <div>　</div>
 <h3>訂單詳細資訊</h3>
 <hr />
@@ -69,7 +72,11 @@
             <div class="col-7">
                 <p>收貨人姓名：@Html.DisplayFor(model => model.ReceiverName)</p>
                 <p>收貨人電話：@Html.DisplayFor(model => model.ReceiverPhone)</p>
+<<<<<<< HEAD
                 <p>收貨人地址：@Html.DisplayFor(model => model.ReceiverAddress)</p>
+=======
+                <p>收貨人地址：@Html.DisplayFor(model => model.ReceiverAdress)</p>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             </div>
             <div class="col-5">
                 <p>
@@ -89,10 +96,13 @@
                         <div class="w-75" id="payment-button"></div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <form method="post" asp-controller="Order" asp-action="CancelOrder" asp-route-id="@Model.Id">
                     <button type="button" class="btn btn-sm btn-danger" onclick="confirmCancelOrder()">取消訂單</button>
 
                 </form>
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             </div>
         </div>
 
@@ -105,6 +115,7 @@
 
 
 <script src="https://www.paypal.com/sdk/js?client-id=AROOEAjq-CEdjN74SU6zEGiQIc-1CKe_Cloaeuudb9ZCZZeAF3dVdqkeqO4fhFOM035egHsnUlK86pk1&currency=TWD"></script>
+<<<<<<< HEAD
 
 <script>
     function confirmCancelOrder() {
@@ -127,6 +138,8 @@
     }
 </script>
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 <script>
     paypal.Buttons({
         style: {

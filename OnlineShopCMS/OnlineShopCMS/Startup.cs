@@ -10,10 +10,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OnlineShopCMS.Data;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Identity;
 using OnlineShopCMS.Services;
 using OnlineShopCMS.Repositories;
 
+=======
+using OnlineShopCMS.Models;
+using OnlineShopCMS.Services;
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 namespace OnlineShopCMS
 {
@@ -30,6 +35,7 @@ namespace OnlineShopCMS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+<<<<<<< HEAD
             services.AddScoped<IPromotionService, PromotionService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IPromotionRepository, PromotionRepository>();
@@ -43,6 +49,14 @@ namespace OnlineShopCMS
             services.AddScoped<OrderService>();
 
 
+=======
+
+            services.AddDbContext<OnlineShopContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("OnlineShopContext")));
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+
+            services.AddTransient<IMailService, MailService>();
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
         }
 
@@ -64,15 +78,22 @@ namespace OnlineShopCMS
 
             app.UseRouting();
 
+<<<<<<< HEAD
 
             app.UseAuthentication();
             app.UseAuthorization();
+=======
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+<<<<<<< HEAD
                 // Add a route for ShippingController
                 endpoints.MapControllerRoute(
                     name: "shipping",
@@ -84,3 +105,9 @@ namespace OnlineShopCMS
 
     }
 }
+=======
+            });
+        }
+    }
+}
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0

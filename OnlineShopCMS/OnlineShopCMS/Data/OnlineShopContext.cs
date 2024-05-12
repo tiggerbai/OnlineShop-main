@@ -10,6 +10,7 @@ namespace OnlineShopCMS.Data
 {
     public class OnlineShopContext : DbContext
     {
+<<<<<<< HEAD
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            
@@ -46,5 +47,16 @@ namespace OnlineShopCMS.Data
 
 
 
+=======
+        public OnlineShopContext (DbContextOptions<OnlineShopContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<OnlineShopCMS.Models.Product> Product { get; set; }
+        public DbSet<OnlineShopCMS.Models.Category> Category { get; set; }
+        public DbSet<OnlineShopCMS.Models.Comment> Comment { get; set; }
+        
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 }

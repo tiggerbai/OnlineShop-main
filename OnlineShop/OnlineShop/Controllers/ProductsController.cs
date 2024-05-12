@@ -10,7 +10,10 @@ using OnlineShop.Data;
 using OnlineShop.Models;
 
 using Microsoft.AspNetCore.Authentication;
+<<<<<<< HEAD
 using OnlineShop.Helpers;
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 namespace OnlineShop.Controllers
 {
@@ -22,7 +25,11 @@ namespace OnlineShop.Controllers
         {
             _context = context;
         }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 
         public async Task<IActionResult> Index(int? cId)
@@ -70,15 +77,23 @@ namespace OnlineShop.Controllers
 
         [HttpPost]
         [Authorize]  //一定要登入才能留言
+<<<<<<< HEAD
         public async Task<IActionResult> AddComment(int Id, string myComment, int rating)
+=======
+        public async Task<IActionResult> AddComment(int Id, string myComment)
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         {
             var comment = new Comment()
             {
                 ProductID = Id,
                 Content = myComment,
                 UserName = HttpContext.User.Identity.Name,  //取得登入中的帳號
+<<<<<<< HEAD
                 Time = DateTime.Now,  //取得當下時間
                 Ratiing = rating
+=======
+                Time = DateTime.Now  //取得當下時間
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             };
             _context.Add(comment);
             await _context.SaveChangesAsync();
@@ -103,9 +118,13 @@ namespace OnlineShop.Controllers
 
             DetailViewModel dvm = new DetailViewModel
             {
+<<<<<<< HEAD
                 Product = product,
                AverageRating = product.Comments.Count > 0 ? product.Comments.Average(c => c.Ratiing) : 0
 
+=======
+                Product = product
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             };
 
             if (product.Image != null)
@@ -140,6 +159,7 @@ namespace OnlineShop.Controllers
             string imgSrc = string.Format("data:image/png;base64,{0}", base64String);
         }
 
+<<<<<<< HEAD
         public IActionResult ApplyCoupon(string couponCode)
         {
             var coupon = _context.Coupon.FirstOrDefault(c => c.Code == couponCode);
@@ -168,6 +188,8 @@ namespace OnlineShop.Controllers
         }
 
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 
 

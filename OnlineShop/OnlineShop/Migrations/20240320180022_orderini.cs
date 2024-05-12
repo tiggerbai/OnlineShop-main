@@ -18,7 +18,11 @@ namespace OnlineShop.Migrations
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Total = table.Column<int>(type: "int", nullable: false),
                     ReceiverName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+<<<<<<< HEAD
                     ReceiverAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+=======
+                    ReceiverAdress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     ReceiverPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     isPaid = table.Column<bool>(type: "bit", nullable: false)
                 },

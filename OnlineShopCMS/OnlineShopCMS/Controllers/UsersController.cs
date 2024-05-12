@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using OnlineShopCMS.Areas.Identity.Data;
 using OnlineShopCMS.Data;
 using OnlineShopCMS.ViewModels;
+=======
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using OnlineShopCMS.Areas.Identity.Data;
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +23,7 @@ namespace OnlineShopCMS.Controllers
     {
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<OnlineShopUser> _userManager;
+<<<<<<< HEAD
         private readonly OnlineShopUserContext _context;
 
         public UsersController(RoleManager<IdentityRole> roleManager, UserManager<OnlineShopUser> userManager, OnlineShopUserContext context) 
@@ -24,6 +31,13 @@ namespace OnlineShopCMS.Controllers
             this._roleManager = roleManager;
             this._userManager = userManager;
             this._context = context;
+=======
+
+        public UsersController(RoleManager<IdentityRole> roleManager, UserManager<OnlineShopUser> userManager)
+        {
+            this._roleManager = roleManager;
+            this._userManager = userManager;
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         }
 
         public IActionResult Index()
@@ -37,6 +51,7 @@ namespace OnlineShopCMS.Controllers
             return View(roles);
         }
 
+<<<<<<< HEAD
         public IActionResult Create()
         {
             var model = new RegisterViewModel();
@@ -87,12 +102,17 @@ namespace OnlineShopCMS.Controllers
         }
 
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         public IActionResult CreateRole()
         {
             return View();
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         [HttpPost]
         public async Task<IActionResult> CreateRole(OnlineShopUserRole role)
         {
@@ -101,6 +121,7 @@ namespace OnlineShopCMS.Controllers
             {
                 var result = await _roleManager.CreateAsync(new IdentityRole(role.RoleName));
             }
+<<<<<<< HEAD
             return View("ListRoles");
         }
         [HttpGet]
@@ -108,10 +129,21 @@ namespace OnlineShopCMS.Controllers
         {
             var role = await _roleManager.FindByIdAsync(id);
             if (role == null)
+=======
+            return View();
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> EditRole(string id)
+        {
+            if (id == null)
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             {
                 return NotFound();
             }
 
+<<<<<<< HEAD
             var usersInRole = await _userManager.GetUsersInRoleAsync(role.Name);
             ViewBag.users = usersInRole;
 
@@ -121,6 +153,21 @@ namespace OnlineShopCMS.Controllers
 
 
 
+=======
+            var role = await _roleManager.FindByIdAsync(id);
+
+            if (role == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                ViewBag.users = await _userManager.GetUsersInRoleAsync(role.Name);
+            }
+            return View(role);
+        }
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         [HttpPost]
         public async Task<IActionResult> EditRole(IdentityRole role)
         {
@@ -162,6 +209,7 @@ namespace OnlineShopCMS.Controllers
             return View(userViewModels);
         }
 
+<<<<<<< HEAD
         [HttpGet]
         public async Task<IActionResult> ListAdministrator()
         {
@@ -187,6 +235,8 @@ namespace OnlineShopCMS.Controllers
         }
 
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
         [HttpGet]
         public async Task<IActionResult> DeleteUser(string id)

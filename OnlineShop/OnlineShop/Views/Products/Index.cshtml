@@ -13,7 +13,11 @@
             <div class="row">
 
 
+<<<<<<< HEAD
                 <div class="col-3" font-size: 24px;>
+=======
+                <div class="col-3">
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     <p></p>
                     @await Component.InvokeAsync("CategoriesList")
                 </div>
@@ -62,8 +66,12 @@
     </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+    <div>共 @ViewBag.count 筆資料</div>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 
 
@@ -72,6 +80,7 @@
 
 
     <!-- Products Section Start -->
+<<<<<<< HEAD
     <!-- Products Section Start -->
     <div class="container-fluid py-5">
         <!-- E-Commerce Services Start -->
@@ -236,10 +245,57 @@
 
     </div>
     </div>
+=======
+    
+    <!-- Products Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">Products</h6>
+                <h1 class="display-5 text-uppercase mb-0">Products For Your Best Friends</h1>
+            </div>
+            @foreach (var category in Model.ProductsByCategory)
+            {
+                <div class="rounded-container mb-4">
+                    <!-- 新增一個容器用於設置圓角邊框 -->
+                    <div class="category-container d-flex">
+                        <div class="category-title" style="width: 25%;">
+                            <h2>@category.Key</h2>
+                        </div>
+                        <div class="owl-carousel portfolio-slider" style="width: 75%;">
+                            @foreach (var detail in category.Value)
+                            {
+                                <div class="item">
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="@Url.Action("ProductImage", "Products", new { id = detail.Product.Id })" class="card-img-top" alt="@detail.Product.Name">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@detail.Product.Name</h5>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </div>
+                                            <div class="buttons">
+                                                <a class="stretched-link text-dark" onclick="ShowMessage()"
+                                                   asp-controller="Cart" asp-action="AddtoCart" asp-route-Id="@detail.Product.Id">加入購物車</a>
+                                                <a class="stretched-link text-dark" onclick="ShowMessage()"
+                                                   asp-controller="Products" asp-action="Details" asp-route-Id="@detail.Product.Id">詳細</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     </div>
     <!-- Products Section End -->
     <!-- Products Section End -->
     <!-- Scripts -->
+<<<<<<< HEAD
 
 
 </body>
@@ -275,10 +331,43 @@
         });
     </script>
 }
+=======
+    @section Scripts {
+        <script>
+            function ShowMessage() {
+                toastr["success"]("商品已加入購物車！");
+            }
+        </script>
+        <script>
+            $(document).ready(function () {
+                // 對每個輪播進行初始化
+                $('.portfolio-slider').each(function () {
+                    $(this).owlCarousel({
+                        loop: true,
+                        margin: 10,
+                        responsive: {
+                            0: { items: 1 },
+                            600: { items: 2 },
+                            1000: { items: 4 }
+                        },
+                        autoplay: true,
+                        autoplayTimeout: 5000,
+                        autoplayHoverPause: true
+                    });
+                });
+            });
+        </script>
+    }
+
+</body>
+
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 
 @section Styles {
     <style>
+<<<<<<< HEAD
         .list-group-item {
             background-color: #f8f9fa !important; /* 更改背景色 */
             color: #212529 !important; /* 更改字體顏色 */
@@ -286,6 +375,8 @@
         }
 
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         .rounded-container {
             border-radius: 15px; /* 圓角邊框半徑 */
             border: 1px solid #ccc; /* 圓角邊框顏色和寬度 */
@@ -293,24 +384,41 @@
         }
 
         .product-container {
+<<<<<<< HEAD
             width: 100%; /* 產品容器寬度 */
         }
 
         .product-item {
             margin: 20px;
+=======
+            width: 75%; /* 产品容器宽度 */
+        }
+
+        .product-item {
+            margin: 10px;
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             border: 1px solid #eee;
             border-radius: 15px;
             padding: 10px;
             text-align: center;
             position: relative;
+<<<<<<< HEAD
             width: 200%;
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         }
 
 
             .product-item img {
+<<<<<<< HEAD
                 width: 200%; /* 圖片寬度和是容器 */
                 height: fit-content; /* 保持圖片原始比例 */
                 margin-bottom: 16px; /* 與下方內容間距 */
+=======
+                width: 100%; /* 圖片寬度和是容器 */
+                height: fit-content; /* 保持圖片原始比例 */
+                margin-bottom: 16px; /* 与下方内容的间距 */
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             }
 
             .product-item h6, .product-item h5 {
@@ -334,7 +442,11 @@
 
         .category-container {
             display: flex;
+<<<<<<< HEAD
             align-items: flex-start;
+=======
+            align-items: flex-start; 
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             gap: 20px; /* 間距 */
         }
 
@@ -346,7 +458,11 @@
 
         .category-title {
             flex: 1;
+<<<<<<< HEAD
             max-width: 16%; /* 限制標題佔據的最大寬 */
+=======
+            max-width: 25%; /* 限制標題佔據的最大寬 */
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         }
 
         .category-header h2 {
@@ -368,6 +484,7 @@
         }
 
         .card-title {
+<<<<<<< HEAD
             font-size: 18px;
             margin-bottom: 10px;
         }
@@ -394,6 +511,12 @@
             width: 100%;
         }
 
+=======
+            font-size:18px;
+            margin-bottom: 10px;
+        }
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         .more-card {
             grid-column: 1 / -1;
             text-align: center;
@@ -402,11 +525,15 @@
         }
 
 
+<<<<<<< HEAD
         .custom-width {
             width: 120%;
             box-sizing: border-box;
             margin: 10px;
         }
+=======
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
 
         .category-title, .product-grid {
@@ -433,7 +560,12 @@
         grid-column: span 2;
     }
 
+<<<<<<< HEAD
 }</style>
+=======
+}
+</style>
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 }
 
 
@@ -449,4 +581,7 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0

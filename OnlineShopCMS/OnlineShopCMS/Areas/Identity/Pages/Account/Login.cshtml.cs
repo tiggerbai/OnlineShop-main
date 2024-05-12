@@ -77,7 +77,11 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
@@ -85,6 +89,7 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+<<<<<<< HEAD
                     var user = await _userManager.FindByEmailAsync(Input.Email);
                     if (user != null)
                     {
@@ -97,6 +102,8 @@ namespace OnlineShopCMS.Areas.Identity.Pages.Account
                         }
                     }
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

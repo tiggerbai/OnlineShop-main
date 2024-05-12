@@ -6,8 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnlineShop.Data;
 
+<<<<<<< HEAD
 #nullable disable
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 namespace OnlineShop.Migrations
 {
     [DbContext(typeof(OnlineShopContext))]
@@ -17,18 +20,29 @@ namespace OnlineShop.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "6.0.29")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+=======
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
             modelBuilder.Entity("OnlineShop.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -42,9 +56,14 @@ namespace OnlineShop.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -69,6 +88,7 @@ namespace OnlineShop.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
@@ -86,6 +106,24 @@ namespace OnlineShop.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ReceiverPhone")
+=======
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ReceiverAdress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceiverName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceiverPhone")
+                        .IsRequired()
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Total")
@@ -100,9 +138,12 @@ namespace OnlineShop.Migrations
                     b.Property<bool>("isPaid")
                         .HasColumnType("bit");
 
+<<<<<<< HEAD
                     b.Property<bool>("isShipped")
                         .HasColumnType("bit");
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     b.HasKey("Id");
 
                     b.ToTable("Order");
@@ -112,16 +153,24 @@ namespace OnlineShop.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
                     b.Property<int>("Amount")
                         .HasColumnType("int");
 
+<<<<<<< HEAD
                     b.Property<bool>("IsReturned")
                         .HasColumnType("bit");
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
@@ -135,6 +184,11 @@ namespace OnlineShop.Migrations
 
                     b.HasIndex("OrderId");
 
+<<<<<<< HEAD
+=======
+                    b.HasIndex("ProductId");
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                     b.ToTable("OrderItem");
                 });
 
@@ -142,9 +196,14 @@ namespace OnlineShop.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -177,11 +236,20 @@ namespace OnlineShop.Migrations
 
             modelBuilder.Entity("OnlineShop.Models.Comment", b =>
                 {
+<<<<<<< HEAD
                     b.HasOne("OnlineShop.Models.Product", null)
+=======
+                    b.HasOne("OnlineShop.Models.Product", "Product")
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                         .WithMany("Comments")
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+<<<<<<< HEAD
+=======
+
+                    b.Navigation("Product");
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                 });
 
             modelBuilder.Entity("OnlineShop.Models.OrderItem", b =>
@@ -191,6 +259,17 @@ namespace OnlineShop.Migrations
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+<<<<<<< HEAD
+=======
+
+                    b.HasOne("OnlineShop.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                 });
 
             modelBuilder.Entity("OnlineShop.Models.Product", b =>

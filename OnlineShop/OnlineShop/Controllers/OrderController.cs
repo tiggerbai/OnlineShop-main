@@ -29,6 +29,7 @@ namespace OnlineShop.Controllers
         // 訂單列表
         public async Task<IActionResult> Index()
         {
+<<<<<<< HEAD
             List<OrderViewModel> orderVM = new List<OrderViewModel>();
             var userId = _userManager.GetUserId(User);
             var orders = await _context.Order.
@@ -40,16 +41,41 @@ namespace OnlineShop.Controllers
                 item.OrderItem = await _context.OrderItem.
                                     Where(p => p.OrderId == item.Id).ToListAsync();
                 var vm = new OrderViewModel()
+=======
+            
+            List<OrderViewModel> orderVM = new List<OrderViewModel>();
+
+            var userId = _userManager.GetUserId(User);
+            var orders = await _context.Order.
+                OrderByDescending(k => k.OrderDate).            //用日期排序
+                Where(m => m.UserId == userId).ToListAsync();   //取得屬於當前登入者的訂單
+
+            foreach(var item in orders)
+            {
+                item.OrderItem = await _context.OrderItem.
+                    Where(p => p.OrderId == item.Id).ToListAsync(); //取得訂單內的商品項目
+
+                var ovm = new OrderViewModel()
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                 {
                     Order = item,
                     CartItems = GetOrderItems(item.Id)
                 };
+<<<<<<< HEAD
                 orderVM.Add(vm);
             }
             return View(orderVM);
         }
         #endregion
 
+=======
+
+                orderVM.Add(ovm);
+            }
+
+            return View(orderVM);
+        }
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
         // 訂單資訊
         public async Task<IActionResult> Details(int? Id)
@@ -73,7 +99,11 @@ namespace OnlineShop.Controllers
             return View(order);
         }
 
+<<<<<<< HEAD
       
+=======
+        #endregion
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
 
         #region 結帳流程
 
@@ -108,16 +138,20 @@ namespace OnlineShop.Controllers
             {
                 order.OrderDate = DateTime.Now;
                 order.isPaid = false;
+<<<<<<< HEAD
                 order.Total = order.OrderItem.Sum(m => m.SubTotal);
                 order.UserId = _userManager.GetUserId(User);
                 order.UserName = _userManager.GetUserName(User);
                 order.isShipped = false;
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
                 order.OrderItem = SessionHelper.GetObjectFromJson<List<OrderItem>>(HttpContext.Session, "cart");
 
                 _context.Add(order);
                 await _context.SaveChangesAsync();
                 SessionHelper.Remove(HttpContext.Session, "cart");
 
+<<<<<<< HEAD
                 return RedirectToAction("ReviewOrder", new { Id = order.Id });
             }
             return View("Checkout");
@@ -128,12 +162,28 @@ namespace OnlineShop.Controllers
         public async Task<IActionResult> ReviewOrder(int? Id)
         {
             if (Id == null)
+=======
+                return RedirectToAction("ReviewOrder", new {  Id = order.Id } );
+            }
+            return View();
+        }
+
+        // 取得當前訂單
+        public async Task<IActionResult> ReviewOrder(int? Id)
+        {
+            if(Id == null)
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             {
                 return NotFound();
             }
 
+<<<<<<< HEAD
             var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == Id);
             if (order.UserId != _userManager.GetUserId(User))
+=======
+            var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == Id); 
+            if(order.UserId != _userManager.GetUserId(User))
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             {
                 return NotFound();
             }
@@ -146,7 +196,10 @@ namespace OnlineShop.Controllers
             return View(order);
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
         // 付款
         public async Task<IActionResult> Payment(int? Id, bool isSuccess)
         {
@@ -156,7 +209,11 @@ namespace OnlineShop.Controllers
             }
 
             var order = await _context.Order.FirstOrDefaultAsync(p => p.Id == Id);
+<<<<<<< HEAD
             if (order == null)
+=======
+            if(order == null)
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             {
                 return NotFound();
             }
@@ -177,7 +234,13 @@ namespace OnlineShop.Controllers
         // 取得商品詳細資料
         private List<CartItem> GetOrderItems(int orderId)
         {
+<<<<<<< HEAD
             var OrderItems = _context.OrderItem.Where(p => p.OrderId == orderId).ToList();
+=======
+            
+            var OrderItems = _context.OrderItem.Where(p => p.OrderId == orderId).ToList();
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
             List<CartItem> orderItems = new List<CartItem>();
             foreach (var orderitem in OrderItems)
             {
@@ -185,6 +248,7 @@ namespace OnlineShop.Controllers
                 item.Product = _context.Product.Single(x => x.Id == orderitem.ProductId);
                 orderItems.Add(item);
             }
+<<<<<<< HEAD
             return orderItems;
         }
 
@@ -244,5 +308,11 @@ namespace OnlineShop.Controllers
         #endregion
 
 
+=======
+
+            return orderItems;
+        }
+
+>>>>>>> 6c1fd4ee0d5dbde6c6b3ed2f1e2922a5860308c0
     }
 }
