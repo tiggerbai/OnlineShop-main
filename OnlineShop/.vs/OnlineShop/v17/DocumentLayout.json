@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\github\\code\\onlineshopcms-main\\onlineshop\\onlineshop\\models\\productfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\productfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|c:\\github\\code\\onlineshopcms-main\\onlineshop\\onlineshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A409CC72-0184-4C7A-9399-9607BB6DB6C5}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -85,7 +89,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -101,7 +105,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "ProductFactory.cs",
+              "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\ProductFactory.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Models\\ProductFactory.cs",
+              "ToolTip": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\ProductFactory.cs",
+              "RelativeToolTip": "OnlineShop\\Models\\ProductFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T13:04:10.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Details.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Products\\Details.cshtml",
@@ -113,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\Product.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Models\\Product.cs",
@@ -125,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Controllers\\ProductsController.cs",
@@ -137,20 +154,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Products\\Index.cshtml",
               "ToolTip": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Products\\Index.cshtml",
               "RelativeToolTip": "OnlineShop\\Views\\Products\\Index.cshtml",
-              "ViewState": "AQIAAJgAAAAAAAAAAAAqwKgAAAAaAAAA",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAqwKcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-08T15:59:44.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Home\\Index.cshtml",
@@ -162,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Checkout.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Checkout.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Checkout.cshtml",
@@ -174,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Index.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Index.cshtml",
@@ -186,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Controllers\\OrderController.cs",
@@ -198,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "OnlineShopContext.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Data\\OnlineShopContext.cs",
@@ -210,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "dbo.Order [\u8CC7\u6599]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./OnlineShop/True/SqlTable/dbo.Order.sql",
               "ToolTip": "dbo.Order [\u8CC7\u6599]",
@@ -219,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ReviewOrder.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\ReviewOrder.cshtml",
@@ -231,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\Order.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Models\\Order.cs",
@@ -243,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Controllers\\CartController.cs",
@@ -255,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Shared\\_Layout.cshtml",
@@ -267,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Views\\Order\\Details.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Order\\Details.cshtml",
@@ -279,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "OnlineShopContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Migrations\\OnlineShopContextModelSnapshot.cs",
@@ -291,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "OrderViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Models\\OrderViewModel.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Models\\OrderViewModel.cs",
@@ -303,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\appsettings.json",
               "RelativeDocumentMoniker": "OnlineShop\\appsettings.json",
@@ -315,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\GitHub\\Code\\OnlineShopCMS-main\\OnlineShop\\OnlineShop\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "OnlineShop\\Controllers\\HomeController.cs",
